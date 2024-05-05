@@ -31,14 +31,12 @@ app.post('/upload', upload.single('file'), (req, res) => {
     console.log('APK decompiled successfully');
     // Optionally, you can remove the uploaded file
     fs.unlinkSync(file.path);
-
     exec(`echo ${decompiledDir} | nuclei -t /home/abhiram/nuclei-templates/file/android/`, (error, stdout, stderr) => {
       if (error) {
         console.error(`Error running Nuclei: ${error}`);
         return res.status(500).send('Error running Nuclei');
       }
       console.log('Nuclei scan completed');
-
       // funtion to make the output json format
       function parseScanResults(results) {
         const lines = results.split('\n');
@@ -56,7 +54,6 @@ app.post('/upload', upload.single('file'), (req, res) => {
         }).filter(Boolean); // filter out any null values
         return parsedResults;
       }
-
       // Send the full output content to the client in json format
       const scanSet = stdout;
       const dataSet = parseScanResults(scanSet);
