@@ -1,9 +1,9 @@
 .class Landroidx/activity/ComponentActivity$3;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "ComponentActivity.java"
 
 # interfaces
-.implements Landroidx/lifecycle/o;
+.implements Landroidx/lifecycle/LifecycleEventObserver;
 
 
 # annotations
@@ -18,14 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Landroidx/activity/ComponentActivity;
+.field final synthetic this$0:Landroidx/activity/ComponentActivity;
 
 
 # direct methods
 .method constructor <init>(Landroidx/activity/ComponentActivity;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/activity/ComponentActivity;
 
-    iput-object p1, p0, Landroidx/activity/ComponentActivity$3;->a:Landroidx/activity/ComponentActivity;
+    .line 108
+    iput-object p1, p0, Landroidx/activity/ComponentActivity$3;->this$0:Landroidx/activity/ComponentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,47 +36,35 @@
 
 
 # virtual methods
-.method public h(Landroidx/lifecycle/r;Landroidx/lifecycle/j$a;)V
-    .locals 0
-    .param p1    # Landroidx/lifecycle/r;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/lifecycle/j$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+    .locals 1
+    .param p1, "source"    # Landroidx/lifecycle/LifecycleOwner;
+    .param p2, "event"    # Landroidx/lifecycle/Lifecycle$Event;
 
-    .line 1
-    sget-object p1, Landroidx/lifecycle/j$a;->ON_STOP:Landroidx/lifecycle/j$a;
+    .line 112
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    if-ne p2, p1, :cond_1
+    if-ne p2, v0, :cond_0
 
-    .line 2
-    iget-object p0, p0, Landroidx/activity/ComponentActivity$3;->a:Landroidx/activity/ComponentActivity;
+    .line 113
+    iget-object v0, p0, Landroidx/activity/ComponentActivity$3;->this$0:Landroidx/activity/ComponentActivity;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->isChangingConfigurations()Z
 
-    move-result-object p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 3
-    invoke-virtual {p0}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
+    .line 114
+    iget-object v0, p0, Landroidx/activity/ComponentActivity$3;->this$0:Landroidx/activity/ComponentActivity;
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroidx/activity/ComponentActivity;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
 
-    goto :goto_0
+    move-result-object v0
 
+    invoke-virtual {v0}, Landroidx/lifecycle/ViewModelStore;->clear()V
+
+    .line 117
     :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    .line 4
-    invoke-static {p0}, Landroidx/activity/ComponentActivity$c;->a(Landroid/view/View;)V
-
-    :cond_1
     return-void
 .end method

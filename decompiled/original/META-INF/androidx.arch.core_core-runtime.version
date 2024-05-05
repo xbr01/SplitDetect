@@ -1,1 +1,1 @@
-task ':arch:core:core-runtime:writeVersionFile' property 'version'
+2.0.0

@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/view/ActionMode;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "ActionMode.java"
 
 
 # annotations
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,41 +45,45 @@
 .end method
 
 .method public getTag()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/appcompat/view/ActionMode;->mTag:Ljava/lang/Object;
+    .line 71
+    iget-object v0, p0, Landroidx/appcompat/view/ActionMode;->mTag:Ljava/lang/Object;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public abstract getTitle()Ljava/lang/CharSequence;
 .end method
 
 .method public getTitleOptionalHint()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Landroidx/appcompat/view/ActionMode;->mTitleOptionalHint:Z
+    .line 145
+    iget-boolean v0, p0, Landroidx/appcompat/view/ActionMode;->mTitleOptionalHint:Z
 
-    return p0
+    return v0
 .end method
 
 .method public abstract invalidate()V
 .end method
 
 .method public isTitleOptional()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    .line 153
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isUiFocusable()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    .line 225
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public abstract setCustomView(Landroid/view/View;)V
@@ -92,9 +97,12 @@
 
 .method public setTag(Ljava/lang/Object;)V
     .locals 0
+    .param p1, "tag"    # Ljava/lang/Object;
 
+    .line 57
     iput-object p1, p0, Landroidx/appcompat/view/ActionMode;->mTag:Ljava/lang/Object;
 
+    .line 58
     return-void
 .end method
 
@@ -106,8 +114,11 @@
 
 .method public setTitleOptionalHint(Z)V
     .locals 0
+    .param p1, "titleOptional"    # Z
 
+    .line 134
     iput-boolean p1, p0, Landroidx/appcompat/view/ActionMode;->mTitleOptionalHint:Z
 
+    .line 135
     return-void
 .end method

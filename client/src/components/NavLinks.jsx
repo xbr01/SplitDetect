@@ -1,17 +1,20 @@
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 const NavLinks = () => {
   return (
-   <nav>
-    <ul className=" flex p-3 text-xl gap-3 bg-slate-50">
+    <nav>
+      <ul className=" flex p-3 text-xl gap-3 bg-slate-50 justify-end">
         <li>
-            <NavLink to="/upload">Upload File</NavLink>
+          <NavLink to="/home">Home</NavLink>
         </li>
         <li>
-            <NavLink to="/result">Render Reasults</NavLink>
+          <NavLink to="/upload">Upload File</NavLink>
         </li>
-    </ul>
-   </nav>
-  )
-}
+        <li>
+          <NavLink to="/result">Render</NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export default NavLinks
+export default NavLinks;

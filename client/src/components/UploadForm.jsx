@@ -12,7 +12,7 @@ import { useContext, useRef, useState } from "react";
 import axios from "axios";
 import { Toaster, toast } from "sonner";
 import confetti from "canvas-confetti";
-import {dataStoreContext} from "../App"
+import { dataStoreContext } from "../App";
 export function UploadForm() {
   const [file, setFile] = useState(undefined);
   const [sending, setSending] = useState(false);
@@ -27,7 +27,10 @@ export function UploadForm() {
     formData.append("file", file);
     try {
       setSending(true);
-      const response = await axios.post("http://localhost:3002/upload", formData);
+      const response = await axios.post(
+        "http://localhost:3002/upload",
+        formData
+      );
       toast.success("Apk File Send Successfully");
       console.log("Scan results:", response.data);
       // Update the state with the extracted scan results
@@ -52,7 +55,7 @@ export function UploadForm() {
           <CardDescription></CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
-          <form ref={formRef}>
+          <form ref={formRef} encType="multipart/form-data">
             <div className="grid gap-2">
               <Input
                 id="file"
@@ -74,28 +77,28 @@ export function UploadForm() {
         </CardFooter>
       </Card>
       <div className="">
-      <table>
-        <thead>
-          <tr>
-            <th>Vulnerability Type</th>
-            <th>Source</th>
-            <th>Severity</th>
-            <th>File Path</th>
-            <th>solution</th>
-          </tr>
-        </thead>
-        <tbody>
-          {outputContent.map((data) => (
-            <tr key={data}>
-              <td>{data["Vulnerability Type"]}</td>
-              <td>{data.Source}</td>
-              <td>{data.Severity}</td>
-              <td>{data["File Path"]}</td>
-              <td>{data["solution"]}</td>
+        <table>
+          <thead>
+            <tr>
+              <th>Vulnerability Type</th>
+              <th>Source</th>
+              <th>Severity</th>
+              <th>File Path</th>
+              <th>solution</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {outputContent.map((data) => (
+              <tr key={data}>
+                <td>{data["Vulnerability Type"]}</td>
+                <td>{data.Source}</td>
+                <td>{data.Severity}</td>
+                <td>{data["File Path"]}</td>
+                <td>{data["solution"]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

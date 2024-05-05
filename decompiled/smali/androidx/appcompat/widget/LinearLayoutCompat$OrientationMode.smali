@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/appcompat/widget/LinearLayoutCompat$OrientationMode;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "LinearLayoutCompat.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

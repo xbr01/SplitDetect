@@ -1,11 +1,6 @@
 .class public interface abstract Landroidx/appcompat/view/CollapsibleActionView;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-
-# annotations
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+.source "CollapsibleActionView.java"
 
 
 # virtual methods

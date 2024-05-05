@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/app/AppCompatDelegateImpl$4;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "AppCompatDelegateImpl.java"
 
 # interfaces
 .implements Landroidx/appcompat/widget/FitWindowsViewGroup$OnFitSystemWindowsListener;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/app/AppCompatDelegateImpl;
 
+    .line 802
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$4;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,17 +37,20 @@
 
 # virtual methods
 .method public onFitSystemWindows(Landroid/graphics/Rect;)V
-    .locals 1
+    .locals 2
+    .param p1, "insets"    # Landroid/graphics/Rect;
 
-    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$4;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    .line 805
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$4;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    const/4 v0, 0x0
+    iget v1, p1, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {p0, v0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->updateStatusGuard(Landroidx/core/view/l0;Landroid/graphics/Rect;)I
+    invoke-virtual {v0, v1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->updateStatusGuard(I)I
 
-    move-result p0
+    move-result v0
 
-    iput p0, p1, Landroid/graphics/Rect;->top:I
+    iput v0, p1, Landroid/graphics/Rect;->top:I
 
+    .line 806
     return-void
 .end method

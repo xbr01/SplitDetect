@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$4;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "SearchView.java"
 
 # interfaces
 .implements Landroid/view/View$OnLayoutChangeListener;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/SearchView;
 
+    .line 376
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$4;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,11 +37,22 @@
 
 # virtual methods
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+    .locals 1
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "left"    # I
+    .param p3, "top"    # I
+    .param p4, "right"    # I
+    .param p5, "bottom"    # I
+    .param p6, "oldLeft"    # I
+    .param p7, "oldTop"    # I
+    .param p8, "oldRight"    # I
+    .param p9, "oldBottom"    # I
 
-    iget-object p0, p0, Landroidx/appcompat/widget/SearchView$4;->this$0:Landroidx/appcompat/widget/SearchView;
+    .line 380
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$4;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->adjustDropDownSizeAndPosition()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->adjustDropDownSizeAndPosition()V
 
+    .line 381
     return-void
 .end method

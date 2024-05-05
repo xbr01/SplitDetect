@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$7;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "SearchView.java"
 
 # interfaces
 .implements Landroid/widget/TextView$OnEditorActionListener;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/SearchView;
 
+    .line 1161
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$7;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,13 +37,18 @@
 
 # virtual methods
 .method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 0
+    .locals 1
+    .param p1, "v"    # Landroid/widget/TextView;
+    .param p2, "actionId"    # I
+    .param p3, "event"    # Landroid/view/KeyEvent;
 
-    iget-object p0, p0, Landroidx/appcompat/widget/SearchView$7;->this$0:Landroidx/appcompat/widget/SearchView;
+    .line 1168
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$7;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->onSubmitQuery()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->onSubmitQuery()V
 
-    const/4 p0, 0x1
+    .line 1169
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method

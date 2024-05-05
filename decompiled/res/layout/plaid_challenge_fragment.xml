@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/plaid_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.plaid.internal.core.ui_components.PlaidNavigationBar android:id="@id/plaid_navigation" android:layout_width="fill_parent" android:layout_height="@dimen/plaid_navigation_height" />
-    <com.plaid.internal.core.ui_components.PlaidInstitutionHeaderItem android:id="@id/plaid_institution" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/plaid_space_4x" android:layout_marginEnd="@dimen/plaid_space_4x" />
-    <TextView android:enabled="true" android:textColor="?plaidTextColorH" android:gravity="center" android:id="@id/header" android:paddingBottom="@dimen/plaid_space_1x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/plaid_space_1x" style="@style/PlaidText.H2.ExtraBold" />
-    <WebView android:id="@id/challenge_webview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-</LinearLayout>

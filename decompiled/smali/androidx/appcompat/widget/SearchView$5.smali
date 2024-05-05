@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$5;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "SearchView.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/SearchView;
 
+    .line 976
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,61 +38,81 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
+    .param p1, "v"    # Landroid/view/View;
 
-    .line 1
-    iget-object p0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+    .line 979
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->mSearchButton:Landroid/widget/ImageView;
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mSearchButton:Landroid/widget/ImageView;
 
     if-ne p1, v0, :cond_0
 
-    .line 2
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->onSearchClicked()V
+    .line 980
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->onSearchClicked()V
 
     goto :goto_0
 
-    .line 3
+    .line 981
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->mCloseButton:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mCloseButton:Landroid/widget/ImageView;
 
     if-ne p1, v0, :cond_1
 
-    .line 4
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->onCloseClicked()V
+    .line 982
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->onCloseClicked()V
 
     goto :goto_0
 
-    .line 5
+    .line 983
     :cond_1
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->mGoButton:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mGoButton:Landroid/widget/ImageView;
 
     if-ne p1, v0, :cond_2
 
-    .line 6
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->onSubmitQuery()V
+    .line 984
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->onSubmitQuery()V
 
     goto :goto_0
 
-    .line 7
+    .line 985
     :cond_2
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->mVoiceButton:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mVoiceButton:Landroid/widget/ImageView;
 
     if-ne p1, v0, :cond_3
 
-    .line 8
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->onVoiceClicked()V
+    .line 986
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->onVoiceClicked()V
 
     goto :goto_0
 
-    .line 9
+    .line 987
     :cond_3
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView;->mSearchSrcTextView:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mSearchSrcTextView:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
 
     if-ne p1, v0, :cond_4
 
-    .line 10
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView;->forceSuggestionQuery()V
+    .line 988
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$5;->this$0:Landroidx/appcompat/widget/SearchView;
 
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SearchView;->forceSuggestionQuery()V
+
+    .line 990
     :cond_4
     :goto_0
     return-void

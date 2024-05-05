@@ -1,6 +1,6 @@
 .class public Landroidx/fragment/app/Fragment$InstantiationException;
 .super Ljava/lang/RuntimeException;
-.source "SourceFile"
+.source "Fragment.java"
 
 
 # annotations
@@ -17,12 +17,12 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 0
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .param p1, "msg"    # Ljava/lang/String;
+    .param p2, "cause"    # Ljava/lang/Exception;
 
+    .line 430
     invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 431
     return-void
 .end method

@@ -6,9 +6,9 @@ export const dataStoreContext = createContext();
 function App() {
   const [dataRecord, setDataRecord] = useState([]);
   return (
-    <dataStoreContext.Provider value={{dataRecord ,setDataRecord}}>
+    <dataStoreContext.Provider value={{ dataRecord, setDataRecord }}>
       <Router>
-        <div className="h-screen bg-slate-950">
+        <div className="h-screen overflow-y-scroll bg-slate-100">
           <NavLinks />
           <div className="flex justify-center items-center h-full">
             <RouterBar />

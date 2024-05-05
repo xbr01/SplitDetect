@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$3;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "SearchView.java"
 
 # interfaces
 .implements Landroid/view/View$OnFocusChangeListener;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/SearchView;
 
+    .line 331
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,18 +37,27 @@
 
 # virtual methods
 .method public onFocusChange(Landroid/view/View;Z)V
-    .locals 0
+    .locals 2
+    .param p1, "v"    # Landroid/view/View;
+    .param p2, "hasFocus"    # Z
 
-    .line 1
-    iget-object p0, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
+    .line 334
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    iget-object p1, p0, Landroidx/appcompat/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 2
-    invoke-interface {p1, p0, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
+    .line 335
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
 
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mOnQueryTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
+
+    iget-object v1, p0, Landroidx/appcompat/widget/SearchView$3;->this$0:Landroidx/appcompat/widget/SearchView;
+
+    invoke-interface {v0, v1, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
+
+    .line 337
     :cond_0
     return-void
 .end method

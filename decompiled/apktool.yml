@@ -1,193 +1,63 @@
-!!brut.androlib.apk.ApkInfo
-apkFileName: 1456e0b2858f26e4c2b239923464fbfd
-doNotCompress:
-- resources.arsc
-- META-INF/androidx.activity_activity-ktx.version
-- META-INF/androidx.activity_activity.version
-- META-INF/androidx.ads_ads-identifier-common.version
-- META-INF/androidx.ads_ads-identifier.version
-- META-INF/androidx.annotation_annotation-experimental.version
-- META-INF/androidx.appcompat_appcompat-resources.version
-- META-INF/androidx.appcompat_appcompat.version
-- META-INF/androidx.biometric_biometric.version
-- META-INF/androidx.camera_camera-camera2.version
-- META-INF/androidx.camera_camera-core.version
-- META-INF/androidx.camera_camera-lifecycle.version
-- META-INF/androidx.camera_camera-view.version
-- META-INF/androidx.cardview_cardview.version
-- META-INF/androidx.coordinatorlayout_coordinatorlayout.version
-- META-INF/androidx.core_core-ktx.version
-- META-INF/androidx.core_core.version
-- META-INF/androidx.cursoradapter_cursoradapter.version
-- META-INF/androidx.customview_customview.version
-- META-INF/androidx.databinding_viewbinding.version
-- META-INF/androidx.datastore_datastore-preferences.version
-- META-INF/androidx.datastore_datastore.version
-- META-INF/androidx.documentfile_documentfile.version
-- META-INF/androidx.drawerlayout_drawerlayout.version
-- META-INF/androidx.dynamicanimation_dynamicanimation.version
-- META-INF/androidx.emoji2_emoji2-views-helper.version
-- META-INF/androidx.emoji2_emoji2.version
-- META-INF/androidx.exifinterface_exifinterface.version
-- META-INF/androidx.fragment_fragment-ktx.version
-- META-INF/androidx.fragment_fragment.version
-- META-INF/androidx.interpolator_interpolator.version
-- META-INF/androidx.legacy_legacy-support-core-utils.version
-- META-INF/androidx.lifecycle_lifecycle-extensions.version
-- META-INF/androidx.loader_loader.version
-- META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
-- META-INF/androidx.navigation_navigation-common-ktx.version
-- META-INF/androidx.navigation_navigation-common.version
-- META-INF/androidx.navigation_navigation-fragment-ktx.version
-- META-INF/androidx.navigation_navigation-fragment.version
-- META-INF/androidx.navigation_navigation-runtime-ktx.version
-- META-INF/androidx.navigation_navigation-runtime.version
-- META-INF/androidx.navigation_navigation-ui-ktx.version
-- META-INF/androidx.navigation_navigation-ui.version
-- META-INF/androidx.print_print.version
-- META-INF/androidx.profileinstaller_profileinstaller.version
-- META-INF/androidx.recyclerview_recyclerview.version
-- META-INF/androidx.room_room-ktx.version
-- META-INF/androidx.room_room-runtime.version
-- META-INF/androidx.savedstate_savedstate-ktx.version
-- META-INF/androidx.savedstate_savedstate.version
-- META-INF/androidx.security_security-crypto.version
-- META-INF/androidx.slidingpanelayout_slidingpanelayout.version
-- META-INF/androidx.sqlite_sqlite-framework.version
-- META-INF/androidx.sqlite_sqlite.version
-- META-INF/androidx.startup_startup-runtime.version
-- META-INF/androidx.tracing_tracing.version
-- META-INF/androidx.transition_transition.version
-- META-INF/androidx.vectordrawable_vectordrawable-animated.version
-- META-INF/androidx.vectordrawable_vectordrawable.version
-- META-INF/androidx.versionedparcelable_versionedparcelable.version
-- META-INF/androidx.viewpager2_viewpager2.version
-- META-INF/androidx.viewpager_viewpager.version
-- META-INF/androidx.webkit_webkit.version
-- META-INF/androidx.window_window-java.version
-- META-INF/androidx.window_window.version
-- META-INF/androidx.work_work-runtime-ktx.version
-- META-INF/androidx.work_work-runtime.version
-- META-INF/com.google.android.material_material.version
-- META-INF/com.google.dagger_dagger.version
-- META-INF/kotlinx_coroutines_android.version
-- META-INF/kotlinx_coroutines_core.version
-- META-INF/kotlinx_coroutines_play_services.version
-- META-INF/kotlinx_coroutines_reactive.version
-- META-INF/kotlinx_coroutines_rx2.version
-- META-INF/services/kotlinx.coroutines.i0
-- META-INF/services/kotlinx.coroutines.internal.t
-- assets/blur_model.tflite
-- assets/glare_model.tflite
-- assets/idd_model.tflite
-- assets/light_intensity_model.tflite
-- assets/dexopt/baseline.prof
-- assets/dexopt/baseline.profm
-- assets/flutter_assets/.env/.env.prod
-- png
-- jpg
-- webp
-- res/raw/keep_cronet_api.xml
-- ogg
+version: 2.9.3
+apkFileName: 6d4246a915017e189875ded4ec51afd0
 isFrameworkApk: false
-packageInfo:
-  forcedPackageId: '127'
-  renameManifestPackage: null
-resourcesAreCompressed: false
-sdkInfo:
-  minSdkVersion: '31'
-  targetSdkVersion: '33'
-sharedLibrary: false
-sparseResources: true
-unknownFiles:
-  DebugProbesKt.bin: '8'
-  LICENSE-junit.txt: '8'
-  barcode-scanning-common.properties: '8'
-  client_analytics.proto: '8'
-  common.properties: '8'
-  failed_response.json: '0'
-  favicon-16px.png: '0'
-  favicon-256.ico: '8'
-  favicon-256px.png: '0'
-  favicon-32px.png: '0'
-  favicon-48.ico: '8'
-  favicon-48px.png: '0'
-  favicon.xcf: '8'
-  firebase-analytics-ktx.properties: '8'
-  firebase-analytics.properties: '8'
-  firebase-annotations.properties: '8'
-  firebase-components.properties: '8'
-  firebase-encoders-proto.properties: '8'
-  firebase-encoders.properties: '8'
-  firebase-iid-interop.properties: '8'
-  firebase-iid.properties: '8'
-  firebase-installations-interop.properties: '8'
-  firebase-measurement-connector.properties: '8'
-  image.properties: '8'
-  javadoc-stylesheet.css: '8'
-  kotlin-tooling-metadata.json: '8'
-  messaging_event.proto: '8'
-  messaging_event_extension.proto: '8'
-  metadata-extractor-logo-131x30.png: '0'
-  metadata-extractor-logo-30px.gif: '0'
-  metadata-extractor-logo-500x123.png: '0'
-  metadata-extractor-logo-square-64px.png: '0'
-  metadata-extractor-logo-square.svg: '8'
-  metadata-extractor-logo.svg: '8'
-  metadata-extractor.ico: '8'
-  play-services-ads-identifier.properties: '8'
-  play-services-base.properties: '8'
-  play-services-basement.properties: '8'
-  play-services-cloud-messaging.properties: '8'
-  play-services-cronet.properties: '8'
-  play-services-location.properties: '8'
-  play-services-measurement-api.properties: '8'
-  play-services-measurement-base.properties: '8'
-  play-services-measurement-impl.properties: '8'
-  play-services-measurement-sdk-api.properties: '8'
-  play-services-measurement-sdk.properties: '8'
-  play-services-measurement.properties: '8'
-  play-services-mlkit-barcode-scanning.properties: '8'
-  play-services-mlkit-face-detection.properties: '8'
-  play-services-mlkit-text-recognition-common.properties: '8'
-  play-services-mlkit-text-recognition.properties: '8'
-  play-services-stats.properties: '8'
-  play-services-tapandpay.properties: '8'
-  play-services-tasks.properties: '8'
-  protolite-well-known-types.properties: '8'
-  success_response.json: '8'
-  success_response_flag.json: '0'
-  transport-api.properties: '8'
-  vision-common.properties: '8'
-  vision-interfaces.properties: '8'
-  stamp-cert-sha256: '8'
-  com/appsflyer/internal/a-: '0'
-  com/appsflyer/internal/b-: '0'
-  com/appsflyer/internal/c-: '0'
-  com/appsflyer/internal/d-: '0'
-  firebase/perf/v1/perf_metric.proto: '8'
-  google/protobuf/any.proto: '8'
-  google/protobuf/api.proto: '8'
-  google/protobuf/duration.proto: '8'
-  google/protobuf/empty.proto: '8'
-  google/protobuf/field_mask.proto: '8'
-  google/protobuf/source_context.proto: '8'
-  google/protobuf/struct.proto: '8'
-  google/protobuf/timestamp.proto: '8'
-  google/protobuf/type.proto: '8'
-  google/protobuf/wrappers.proto: '8'
-  junit/runner/logo.gif: '0'
-  junit/runner/smalllogo.gif: '0'
-  okhttp3/internal/publicsuffix/NOTICE: '8'
-  okhttp3/internal/publicsuffix/a.gz: '0'
-  org/bouncycastle/x509/CertPathReviewerMessages.properties: '8'
-  org/bouncycastle/x509/CertPathReviewerMessages_de.properties: '8'
-  org/commonmark/internal/util/entities.properties: '8'
 usesFramework:
   ids:
   - 1
   tag: null
-version: 2.8.1
+sdkInfo:
+  minSdkVersion: 16
+  targetSdkVersion: 29
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
 versionInfo:
-  versionCode: '846'
-  versionName: 1.4.2
+  versionCode: 1
+  versionName: 1.0
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+doNotCompress:
+- resources.arsc
+- png
+- META-INF/androidx.customview_customview.version
+- META-INF/androidx.legacy_legacy-support-core-ui.version
+- META-INF/com.google.android.material_material.version
+- META-INF/androidx.slidingpanelayout_slidingpanelayout.version
+- META-INF/androidx.exifinterface_exifinterface.version
+- META-INF/androidx.legacy_legacy-support-v4.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.databinding_library.version
+- META-INF/androidx.appcompat_appcompat-resources.version
+- META-INF/androidx.appcompat_appcompat.version
+- META-INF/androidx.lifecycle_lifecycle-livedata.version
+- META-INF/androidx.cursoradapter_cursoradapter.version
+- META-INF/androidx.media_media.version
+- META-INF/androidx.savedstate_savedstate.version
+- META-INF/androidx.fragment_fragment.version
+- META-INF/androidx.vectordrawable_vectordrawable.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.vectordrawable_vectordrawable-animated.version
+- META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
+- META-INF/androidx.legacy_legacy-support-core-utils.version
+- META-INF/androidx.viewpager2_viewpager2.version
+- META-INF/androidx.transition_transition.version
+- META-INF/androidx.print_print.version
+- META-INF/androidx.documentfile_documentfile.version
+- META-INF/androidx.core_core-ktx.version
+- META-INF/androidx.recyclerview_recyclerview.version
+- META-INF/androidx.databinding_baseAdapters.version
+- META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version
+- META-INF/androidx.arch.core_core-runtime.version
+- META-INF/androidx.activity_activity.version
+- META-INF/androidx.databinding_viewbinding.version
+- META-INF/androidx.drawerlayout_drawerlayout.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
+- META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
+- META-INF/androidx.loader_loader.version
+- META-INF/androidx.viewpager_viewpager.version
+- META-INF/androidx.cardview_cardview.version
+- META-INF/androidx.coordinatorlayout_coordinatorlayout.version

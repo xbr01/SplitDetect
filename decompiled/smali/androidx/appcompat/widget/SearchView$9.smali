@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$9;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "SearchView.java"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/SearchView;
 
+    .line 1419
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$9;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,7 +37,10 @@
 
 # virtual methods
 .method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
+    .locals 1
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "position"    # I
+    .param p4, "id"    # J
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -46,10 +51,13 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroidx/appcompat/widget/SearchView$9;->this$0:Landroidx/appcompat/widget/SearchView;
+    .line 1427
+    .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
+    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$9;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    invoke-virtual {p0, p3}, Landroidx/appcompat/widget/SearchView;->onItemSelected(I)Z
+    invoke-virtual {v0, p3}, Landroidx/appcompat/widget/SearchView;->onItemSelected(I)Z
 
+    .line 1428
     return-void
 .end method
 
@@ -63,5 +71,7 @@
         }
     .end annotation
 
+    .line 1437
+    .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     return-void
 .end method

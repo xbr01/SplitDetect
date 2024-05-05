@@ -1,14 +1,14 @@
 .class Landroidx/appcompat/view/menu/MenuItemImpl$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "MenuItemImpl.java"
 
 # interfaces
-.implements Landroidx/core/view/b$b;
+.implements Landroidx/core/view/ActionProvider$VisibilityListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/view/menu/MenuItemImpl;->setSupportActionProvider(Landroidx/core/view/b;)Landroidx/core/internal/view/b;
+    value = Landroidx/appcompat/view/menu/MenuItemImpl;->setSupportActionProvider(Landroidx/core/view/ActionProvider;)Landroidx/core/internal/view/SupportMenuItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/view/menu/MenuItemImpl;
 
+    .line 806
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl$1;->this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,13 +37,18 @@
 
 # virtual methods
 .method public onActionProviderVisibilityChanged(Z)V
-    .locals 0
+    .locals 2
+    .param p1, "isVisible"    # Z
 
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemImpl$1;->this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
+    .line 809
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemImpl$1;->this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
 
-    iget-object p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/MenuItemImpl;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    invoke-virtual {p1, p0}, Landroidx/appcompat/view/menu/MenuBuilder;->onItemVisibleChanged(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+    iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemImpl$1;->this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
 
+    invoke-virtual {v0, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->onItemVisibleChanged(Landroidx/appcompat/view/menu/MenuItemImpl;)V
+
+    .line 810
     return-void
 .end method

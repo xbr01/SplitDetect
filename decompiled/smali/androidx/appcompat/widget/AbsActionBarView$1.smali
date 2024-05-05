@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/AbsActionBarView$1;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "AbsActionBarView.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/AbsActionBarView;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/AbsActionBarView;
 
+    .line 201
     iput-object p1, p0, Landroidx/appcompat/widget/AbsActionBarView$1;->this$0:Landroidx/appcompat/widget/AbsActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,11 +37,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/appcompat/widget/AbsActionBarView$1;->this$0:Landroidx/appcompat/widget/AbsActionBarView;
+    .line 204
+    iget-object v0, p0, Landroidx/appcompat/widget/AbsActionBarView$1;->this$0:Landroidx/appcompat/widget/AbsActionBarView;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/AbsActionBarView;->showOverflowMenu()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/AbsActionBarView;->showOverflowMenu()Z
 
+    .line 205
     return-void
 .end method

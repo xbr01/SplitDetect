@@ -1,66 +1,61 @@
 .class Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "ReflectiveGenericLifecycleObserver.java"
 
 # interfaces
-.implements Landroidx/lifecycle/o;
-
-
-# annotations
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+.implements Landroidx/lifecycle/LifecycleEventObserver;
 
 
 # instance fields
-.field private final a:Ljava/lang/Object;
+.field private final mInfo:Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
-.field private final b:Landroidx/lifecycle/c$a;
+.field private final mWrapped:Ljava/lang/Object;
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+    .locals 2
+    .param p1, "wrapped"    # Ljava/lang/Object;
 
-    .line 1
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->a:Ljava/lang/Object;
+    .line 30
+    iput-object p1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mWrapped:Ljava/lang/Object;
 
-    .line 3
-    sget-object v0, Landroidx/lifecycle/c;->c:Landroidx/lifecycle/c;
+    .line 31
+    sget-object v0, Landroidx/lifecycle/ClassesInfoCache;->sInstance:Landroidx/lifecycle/ClassesInfoCache;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mWrapped:Ljava/lang/Object;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/c;->c(Ljava/lang/Class;)Landroidx/lifecycle/c$a;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/ClassesInfoCache;->getInfo(Ljava/lang/Class;)Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
-    iput-object p1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->b:Landroidx/lifecycle/c$a;
+    move-result-object v0
 
+    iput-object v0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mInfo:Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
+
+    .line 32
     return-void
 .end method
 
 
 # virtual methods
-.method public h(Landroidx/lifecycle/r;Landroidx/lifecycle/j$a;)V
-    .locals 1
-    .param p1    # Landroidx/lifecycle/r;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/lifecycle/j$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
+    .locals 2
+    .param p1, "source"    # Landroidx/lifecycle/LifecycleOwner;
+    .param p2, "event"    # Landroidx/lifecycle/Lifecycle$Event;
 
-    iget-object v0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->b:Landroidx/lifecycle/c$a;
+    .line 36
+    iget-object v0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mInfo:Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
-    iget-object p0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->a:Ljava/lang/Object;
+    iget-object v1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mWrapped:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, p2, p0}, Landroidx/lifecycle/c$a;->a(Landroidx/lifecycle/r;Landroidx/lifecycle/j$a;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p2, v1}, Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;->invokeCallbacks(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
 
+    .line 37
     return-void
 .end method

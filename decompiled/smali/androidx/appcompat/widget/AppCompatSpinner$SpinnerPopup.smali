@@ -1,6 +1,6 @@
 .class interface abstract Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "AppCompatSpinner.java"
 
 
 # annotations

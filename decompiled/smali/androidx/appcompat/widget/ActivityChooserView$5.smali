@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ActivityChooserView$5;
 .super Landroid/database/DataSetObserver;
-.source "SourceFile"
+.source "ActivityChooserView.java"
 
 
 # annotations
@@ -21,7 +21,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/ActivityChooserView;
 
+    .line 286
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$5;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -32,15 +34,16 @@
 
 # virtual methods
 .method public onChanged()V
-    .locals 0
+    .locals 1
 
-    .line 1
+    .line 289
     invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    .line 2
-    iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$5;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
+    .line 290
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$5;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->updateAppearance()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->updateAppearance()V
 
+    .line 291
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/appcompat/widget/ThemedSpinnerAdapter;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "ThemedSpinnerAdapter.java"
 
 # interfaces
 .implements Landroid/widget/SpinnerAdapter;

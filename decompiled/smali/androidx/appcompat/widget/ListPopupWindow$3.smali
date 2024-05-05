@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ListPopupWindow$3;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "ListPopupWindow.java"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
@@ -24,7 +24,9 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
     .locals 0
+    .param p1, "this$0"    # Landroidx/appcompat/widget/ListPopupWindow;
 
+    .line 1187
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$3;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,7 +37,10 @@
 
 # virtual methods
 .method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
+    .locals 2
+    .param p2, "view"    # Landroid/view/View;
+    .param p3, "position"    # I
+    .param p4, "id"    # J
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -46,22 +51,28 @@
         }
     .end annotation
 
-    const/4 p1, -0x1
+    .line 1192
+    .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
+    const/4 v0, -0x1
 
-    if-eq p3, p1, :cond_0
+    if-eq p3, v0, :cond_0
 
-    .line 1
-    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$3;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
+    .line 1193
+    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$3;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
+    iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
-    if-eqz p0, :cond_0
+    .line 1195
+    .local v0, "dropDownList":Landroidx/appcompat/widget/DropDownListView;
+    if-eqz v0, :cond_0
 
-    const/4 p1, 0x0
+    .line 1196
+    const/4 v1, 0x0
 
-    .line 2
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/DropDownListView;->setListSelectionHidden(Z)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/DropDownListView;->setListSelectionHidden(Z)V
 
+    .line 1199
+    .end local v0    # "dropDownList":Landroidx/appcompat/widget/DropDownListView;
     :cond_0
     return-void
 .end method
@@ -76,5 +87,7 @@
         }
     .end annotation
 
+    .line 1203
+    .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     return-void
 .end method

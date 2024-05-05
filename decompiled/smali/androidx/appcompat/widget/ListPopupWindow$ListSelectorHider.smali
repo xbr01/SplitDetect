@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ListPopupWindow$ListSelectorHider;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "ListPopupWindow.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -25,21 +25,25 @@
 .method constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
     .locals 0
 
+    .line 1362
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$ListSelectorHider;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1363
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$ListSelectorHider;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
+    .line 1367
+    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$ListSelectorHider;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ListPopupWindow;->clearListSelection()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->clearListSelection()V
 
+    .line 1368
     return-void
 .end method

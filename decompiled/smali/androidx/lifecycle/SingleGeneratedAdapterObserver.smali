@@ -1,75 +1,53 @@
-.class public final Landroidx/lifecycle/SingleGeneratedAdapterObserver;
+.class Landroidx/lifecycle/SingleGeneratedAdapterObserver;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "SingleGeneratedAdapterObserver.java"
 
 # interfaces
-.implements Landroidx/lifecycle/o;
+.implements Landroidx/lifecycle/LifecycleEventObserver;
 
 
 # instance fields
-.field private final a:Landroidx/lifecycle/h;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
+.field private final mGeneratedAdapter:Landroidx/lifecycle/GeneratedAdapter;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/h;)V
-    .locals 1
-    .param p1    # Landroidx/lifecycle/h;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+.method constructor <init>(Landroidx/lifecycle/GeneratedAdapter;)V
+    .locals 0
+    .param p1, "generatedAdapter"    # Landroidx/lifecycle/GeneratedAdapter;
 
-    const-string v0, "generatedAdapter"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Landroidx/lifecycle/SingleGeneratedAdapterObserver;->a:Landroidx/lifecycle/h;
+    .line 24
+    iput-object p1, p0, Landroidx/lifecycle/SingleGeneratedAdapterObserver;->mGeneratedAdapter:Landroidx/lifecycle/GeneratedAdapter;
 
+    .line 25
     return-void
 .end method
 
 
 # virtual methods
-.method public h(Landroidx/lifecycle/r;Landroidx/lifecycle/j$a;)V
+.method public onStateChanged(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 3
-    .param p1    # Landroidx/lifecycle/r;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/lifecycle/j$a;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+    .param p1, "source"    # Landroidx/lifecycle/LifecycleOwner;
+    .param p2, "event"    # Landroidx/lifecycle/Lifecycle$Event;
 
-    const-string v0, "source"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "event"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    iget-object v0, p0, Landroidx/lifecycle/SingleGeneratedAdapterObserver;->a:Landroidx/lifecycle/h;
+    .line 29
+    iget-object v0, p0, Landroidx/lifecycle/SingleGeneratedAdapterObserver;->mGeneratedAdapter:Landroidx/lifecycle/GeneratedAdapter;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, p1, p2, v1, v2}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/r;Landroidx/lifecycle/j$a;ZLandroidx/lifecycle/y;)V
+    invoke-interface {v0, p1, p2, v2, v1}, Landroidx/lifecycle/GeneratedAdapter;->callMethods(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
 
-    .line 2
-    iget-object p0, p0, Landroidx/lifecycle/SingleGeneratedAdapterObserver;->a:Landroidx/lifecycle/h;
+    .line 30
+    iget-object v0, p0, Landroidx/lifecycle/SingleGeneratedAdapterObserver;->mGeneratedAdapter:Landroidx/lifecycle/GeneratedAdapter;
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    invoke-interface {p0, p1, p2, v0, v2}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/r;Landroidx/lifecycle/j$a;ZLandroidx/lifecycle/y;)V
+    invoke-interface {v0, p1, p2, v2, v1}, Landroidx/lifecycle/GeneratedAdapter;->callMethods(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/MethodCallsLogger;)V
 
+    .line 31
     return-void
 .end method

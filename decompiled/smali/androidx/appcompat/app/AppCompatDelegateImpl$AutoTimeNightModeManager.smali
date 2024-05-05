@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;
 .super Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
-.source "SourceFile"
+.source "AppCompatDelegateImpl.java"
 
 
 # annotations
@@ -23,78 +23,81 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/TwilightManager;)V
     .locals 0
-    .param p1    # Landroidx/appcompat/app/AppCompatDelegateImpl;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .param p2, "twilightManager"    # Landroidx/appcompat/app/TwilightManager;
 
-    .line 1
+    .line 3002
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-><init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
 
-    .line 2
+    .line 3003
     iput-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->mTwilightManager:Landroidx/appcompat/app/TwilightManager;
 
+    .line 3004
     return-void
 .end method
 
 
 # virtual methods
 .method createIntentFilterForBroadcastReceiver()Landroid/content/IntentFilter;
-    .locals 1
+    .locals 2
 
-    .line 1
-    new-instance p0, Landroid/content/IntentFilter;
+    .line 3019
+    new-instance v0, Landroid/content/IntentFilter;
 
-    invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    const-string v0, "android.intent.action.TIME_SET"
+    .line 3020
+    .local v0, "filter":Landroid/content/IntentFilter;
+    const-string v1, "android.intent.action.TIME_SET"
 
-    .line 2
-    invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string v0, "android.intent.action.TIMEZONE_CHANGED"
+    .line 3021
+    const-string v1, "android.intent.action.TIMEZONE_CHANGED"
 
-    .line 3
-    invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string v0, "android.intent.action.TIME_TICK"
+    .line 3022
+    const-string v1, "android.intent.action.TIME_TICK"
 
-    .line 4
-    invoke-virtual {p0, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    return-object p0
+    .line 3023
+    return-object v0
 .end method
 
 .method public getApplyableNightMode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->mTwilightManager:Landroidx/appcompat/app/TwilightManager;
+    .line 3009
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->mTwilightManager:Landroidx/appcompat/app/TwilightManager;
 
-    invoke-virtual {p0}, Landroidx/appcompat/app/TwilightManager;->isNight()Z
+    invoke-virtual {v0}, Landroidx/appcompat/app/TwilightManager;->isNight()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x2
+    const/4 v0, 0x2
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     :goto_0
-    return p0
+    return v0
 .end method
 
 .method public onChange()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    .line 3014
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoTimeNightModeManager;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->applyDayNight()Z
+    invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->applyDayNight()Z
 
+    .line 3015
     return-void
 .end method

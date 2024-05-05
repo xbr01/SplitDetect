@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "ActionMenuPresenter.java"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter$Callback;
@@ -25,10 +25,12 @@
 .method constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter;)V
     .locals 0
 
+    .line 760
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 761
     return-void
 .end method
 
@@ -36,17 +38,15 @@
 # virtual methods
 .method public onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
     .locals 2
-    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
+    .param p2, "allMenusAreClosing"    # Z
 
-    .line 1
+    .line 774
     instance-of v0, p1, Landroidx/appcompat/view/menu/SubMenuBuilder;
 
     if-eqz v0, :cond_0
 
-    .line 2
+    .line 775
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/MenuBuilder;->getRootMenu()Landroidx/appcompat/view/menu/MenuBuilder;
 
     move-result-object v0
@@ -55,46 +55,40 @@
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
 
-    .line 3
+    .line 777
     :cond_0
-    iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    invoke-virtual {p0}, Landroidx/appcompat/view/menu/BaseMenuPresenter;->getCallback()Landroidx/appcompat/view/menu/MenuPresenter$Callback;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->getCallback()Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_1
+    .line 778
+    .local v0, "cb":Landroidx/appcompat/view/menu/MenuPresenter$Callback;
+    if-eqz v0, :cond_1
 
-    .line 4
-    invoke-interface {p0, p1, p2}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
+    .line 779
+    invoke-interface {v0, p1, p2}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
 
+    .line 781
     :cond_1
     return-void
 .end method
 
 .method public onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
     .locals 3
-    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .param p1, "subMenu"    # Landroidx/appcompat/view/menu/MenuBuilder;
 
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
+    .line 765
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Landroidx/appcompat/widget/ActionMenuPresenter;->access$300(Landroidx/appcompat/widget/ActionMenuPresenter;)Landroidx/appcompat/view/menu/MenuBuilder;
+    if-nez p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    const/4 v1, 0x0
-
-    if-ne p1, v0, :cond_0
-
-    return v1
-
-    .line 2
+    .line 767
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
+    iget-object v1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
 
     move-object v2, p1
 
@@ -108,22 +102,23 @@
 
     move-result v2
 
-    iput v2, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->mOpenSubMenuId:I
+    iput v2, v1, Landroidx/appcompat/widget/ActionMenuPresenter;->mOpenSubMenuId:I
 
-    .line 3
-    iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
+    .line 768
+    iget-object v1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$PopupPresenterCallback;->this$0:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    invoke-virtual {p0}, Landroidx/appcompat/view/menu/BaseMenuPresenter;->getCallback()Landroidx/appcompat/view/menu/MenuPresenter$Callback;
+    invoke-virtual {v1}, Landroidx/appcompat/widget/ActionMenuPresenter;->getCallback()Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-eqz p0, :cond_1
+    .line 769
+    .local v1, "cb":Landroidx/appcompat/view/menu/MenuPresenter$Callback;
+    if-eqz v1, :cond_1
 
-    .line 4
-    invoke-interface {p0, p1}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
+    invoke-interface {v1, p1}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
 
-    move-result v1
+    move-result v0
 
     :cond_1
-    return v1
+    return v0
 .end method

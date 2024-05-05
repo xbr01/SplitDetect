@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/view/menu/MenuDialogHelper;
 .super Ljava/lang/Object;
-.source "SourceFile"
+.source "MenuDialogHelper.java"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnKeyListener;
@@ -22,114 +22,127 @@
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 0
+    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
 
-    .line 1
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
+    .line 43
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
+    .line 44
     return-void
 .end method
 
 
 # virtual methods
 .method public dismiss()V
-    .locals 0
+    .locals 1
 
-    .line 1
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    .line 139
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 2
-    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatDialog;->dismiss()V
+    .line 140
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog;->dismiss()V
 
+    .line 142
     :cond_0
     return-void
 .end method
 
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+    .locals 3
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
-    iget-object p1, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+    .line 169
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenter:Landroidx/appcompat/view/menu/ListMenuPresenter;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenter:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
-    invoke-virtual {p0}, Landroidx/appcompat/view/menu/ListMenuPresenter;->getAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {v1}, Landroidx/appcompat/view/menu/ListMenuPresenter;->getAdapter()Landroid/widget/ListAdapter;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-interface {p0, p2}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-interface {v1, p2}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Landroidx/appcompat/view/menu/MenuItemImpl;
+    check-cast v1, Landroidx/appcompat/view/menu/MenuItemImpl;
 
-    const/4 p2, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p0, p2}, Landroidx/appcompat/view/menu/MenuBuilder;->performItemAction(Landroid/view/MenuItem;I)Z
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/view/menu/MenuBuilder;->performItemAction(Landroid/view/MenuItem;I)Z
 
+    .line 170
     return-void
 .end method
 
 .method public onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
     .locals 1
-    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
+    .param p2, "allMenusAreClosing"    # Z
 
+    .line 151
     if-nez p2, :cond_0
 
-    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     if-ne p1, v0, :cond_1
 
-    .line 2
+    .line 152
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuDialogHelper;->dismiss()V
 
-    .line 3
+    .line 154
     :cond_1
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenterCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenterCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
-    .line 4
-    invoke-interface {p0, p1, p2}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
+    .line 155
+    invoke-interface {v0, p1, p2}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
 
+    .line 157
     :cond_2
     return-void
 .end method
 
 .method public onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
+    .locals 3
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
 
-    iget-object p1, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenter:Landroidx/appcompat/view/menu/ListMenuPresenter;
+    .line 146
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenter:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, p0, v0}, Landroidx/appcompat/view/menu/ListMenuPresenter;->onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
+    invoke-virtual {v0, v1, v2}, Landroidx/appcompat/view/menu/ListMenuPresenter;->onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
 
+    .line 147
     return-void
 .end method
 
 .method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 2
+    .locals 5
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "keyCode"    # I
+    .param p3, "event"    # Landroid/view/KeyEvent;
 
+    .line 94
     const/16 v0, 0x52
 
     if-eq p2, v0, :cond_0
 
     const/4 v0, 0x4
 
-    if-ne p2, v0, :cond_2
+    if-ne p2, v0, :cond_3
 
-    .line 1
+    .line 95
     :cond_0
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -139,42 +152,52 @@
 
     if-nez v0, :cond_1
 
-    .line 2
+    .line 96
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 3
-    iget-object p1, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    .line 97
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog;->getWindow()Landroid/view/Window;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_2
+    .line 98
+    .local v0, "win":Landroid/view/Window;
+    if-eqz v0, :cond_2
 
-    .line 4
-    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    .line 99
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object p1
+    move-result-object v2
 
-    if-eqz p1, :cond_2
+    .line 100
+    .local v2, "decor":Landroid/view/View;
+    if-eqz v2, :cond_2
 
-    .line 5
-    invoke-virtual {p1}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
+    .line 101
+    invoke-virtual {v2}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
-    move-result-object p1
+    move-result-object v3
 
-    if-eqz p1, :cond_2
+    .line 102
+    .local v3, "ds":Landroid/view/KeyEvent$DispatcherState;
+    if-eqz v3, :cond_2
 
-    .line 6
-    invoke-virtual {p1, p3, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
+    .line 103
+    invoke-virtual {v3, p3, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
+    .line 104
     return v1
 
-    .line 7
+    .line 108
+    .end local v0    # "win":Landroid/view/Window;
+    .end local v2    # "decor":Landroid/view/View;
+    .end local v3    # "ds":Landroid/view/KeyEvent$DispatcherState;
     :cond_1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -188,99 +211,115 @@
 
     if-nez v0, :cond_2
 
-    .line 8
+    .line 109
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Landroidx/appcompat/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    .line 110
+    .restart local v0    # "win":Landroid/view/Window;
+    if-eqz v0, :cond_3
 
-    .line 9
+    .line 111
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v2
 
-    if-eqz v0, :cond_2
+    .line 112
+    .restart local v2    # "decor":Landroid/view/View;
+    if-eqz v2, :cond_3
 
-    .line 10
-    invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
+    .line 113
+    invoke-virtual {v2}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
-    move-result-object v0
+    move-result-object v3
 
-    if-eqz v0, :cond_2
+    .line 114
+    .restart local v3    # "ds":Landroid/view/KeyEvent$DispatcherState;
+    if-eqz v3, :cond_3
 
-    .line 11
-    invoke-virtual {v0, p3}, Landroid/view/KeyEvent$DispatcherState;->isTracking(Landroid/view/KeyEvent;)Z
+    invoke-virtual {v3, p3}, Landroid/view/KeyEvent$DispatcherState;->isTracking(Landroid/view/KeyEvent;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    .line 115
+    iget-object v4, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+
+    invoke-virtual {v4, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
+
+    .line 116
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 117
+    return v1
+
+    .line 108
+    .end local v0    # "win":Landroid/view/Window;
+    .end local v2    # "decor":Landroid/view/View;
+    .end local v3    # "ds":Landroid/view/KeyEvent$DispatcherState;
+    :cond_2
+    nop
+
+    .line 125
+    :cond_3
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p2, p3, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->performShortcut(ILandroid/view/KeyEvent;I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    .line 12
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
-
-    invoke-virtual {p0, v1}, Landroidx/appcompat/view/menu/MenuBuilder;->close(Z)V
-
-    .line 13
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    return v1
-
-    .line 14
-    :cond_2
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p2, p3, p1}, Landroidx/appcompat/view/menu/MenuBuilder;->performShortcut(ILandroid/view/KeyEvent;I)Z
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
-    .locals 0
-    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .locals 1
+    .param p1, "subMenu"    # Landroidx/appcompat/view/menu/MenuBuilder;
 
-    .line 1
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenterCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
+    .line 161
+    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenterCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 2
-    invoke-interface {p0, p1}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
+    .line 162
+    invoke-interface {v0, p1}, Landroidx/appcompat/view/menu/MenuPresenter$Callback;->onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
+    .line 164
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public setPresenterCallback(Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V
     .locals 0
+    .param p1, "cb"    # Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
+    .line 130
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenterCallback:Landroidx/appcompat/view/menu/MenuPresenter$Callback;
 
+    .line 131
     return-void
 .end method
 
 .method public show(Landroid/os/IBinder;)V
-    .locals 5
+    .locals 6
+    .param p1, "windowToken"    # Landroid/os/IBinder;
 
-    .line 1
+    .line 53
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    .line 2
+    .line 56
+    .local v0, "menu":Landroidx/appcompat/view/menu/MenuBuilder;
     new-instance v1, Landroidx/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuBuilder;->getContext()Landroid/content/Context;
@@ -289,7 +328,8 @@
 
     invoke-direct {v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 3
+    .line 58
+    .local v1, "builder":Landroidx/appcompat/app/AlertDialog$Builder;
     new-instance v2, Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     invoke-virtual {v1}, Landroidx/appcompat/app/AlertDialog$Builder;->getContext()Landroid/content/Context;
@@ -302,17 +342,17 @@
 
     iput-object v2, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenter:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
-    .line 4
+    .line 61
     invoke-virtual {v2, p0}, Landroidx/appcompat/view/menu/ListMenuPresenter;->setCallback(Landroidx/appcompat/view/menu/MenuPresenter$Callback;)V
 
-    .line 5
+    .line 62
     iget-object v2, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
     iget-object v3, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenter:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     invoke-virtual {v2, v3}, Landroidx/appcompat/view/menu/MenuBuilder;->addMenuPresenter(Landroidx/appcompat/view/menu/MenuPresenter;)V
 
-    .line 6
+    .line 63
     iget-object v2, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mPresenter:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     invoke-virtual {v2}, Landroidx/appcompat/view/menu/ListMenuPresenter;->getAdapter()Landroid/widget/ListAdapter;
@@ -321,83 +361,88 @@
 
     invoke-virtual {v1, v2, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setAdapter(Landroid/widget/ListAdapter;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    .line 7
+    .line 66
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuBuilder;->getHeaderView()Landroid/view/View;
 
     move-result-object v2
 
+    .line 67
+    .local v2, "headerView":Landroid/view/View;
     if-eqz v2, :cond_0
 
-    .line 8
+    .line 69
     invoke-virtual {v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setCustomTitle(Landroid/view/View;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     goto :goto_0
 
-    .line 9
+    .line 72
     :cond_0
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuBuilder;->getHeaderIcon()Landroid/graphics/drawable/Drawable;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v1, v3}, Landroidx/appcompat/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-virtual {v0}, Landroidx/appcompat/view/menu/MenuBuilder;->getHeaderTitle()Ljava/lang/CharSequence;
 
-    move-result-object v0
+    move-result-object v4
 
-    invoke-virtual {v2, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-virtual {v3, v4}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    .line 10
+    .line 76
     :goto_0
     invoke-virtual {v1, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
-    .line 11
+    .line 79
     invoke-virtual {v1}, Landroidx/appcompat/app/AlertDialog$Builder;->create()Landroidx/appcompat/app/AlertDialog;
 
-    move-result-object v0
+    move-result-object v3
 
-    iput-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    iput-object v3, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    .line 12
-    invoke-virtual {v0, p0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    .line 80
+    invoke-virtual {v3, p0}, Landroidx/appcompat/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 13
-    iget-object v0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    .line 82
+    iget-object v3, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v3}, Landroidx/appcompat/app/AlertDialog;->getWindow()Landroid/view/Window;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+    invoke-virtual {v3}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object v0
+    move-result-object v3
 
-    const/16 v1, 0x3eb
+    .line 83
+    .local v3, "lp":Landroid/view/WindowManager$LayoutParams;
+    const/16 v4, 0x3eb
 
-    .line 14
-    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+    iput v4, v3, Landroid/view/WindowManager$LayoutParams;->type:I
 
+    .line 84
     if-eqz p1, :cond_1
 
-    .line 15
-    iput-object p1, v0, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
+    .line 85
+    iput-object p1, v3, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 16
+    .line 87
     :cond_1
-    iget p1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iget v4, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    const/high16 v1, 0x20000
+    const/high16 v5, 0x20000
 
-    or-int/2addr p1, v1
+    or-int/2addr v4, v5
 
-    iput p1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+    iput v4, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 17
-    iget-object p0, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
+    .line 89
+    iget-object v4, p0, Landroidx/appcompat/view/menu/MenuDialogHelper;->mDialog:Landroidx/appcompat/app/AlertDialog;
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->show()V
+    invoke-virtual {v4}, Landroidx/appcompat/app/AlertDialog;->show()V
 
+    .line 90
     return-void
 .end method

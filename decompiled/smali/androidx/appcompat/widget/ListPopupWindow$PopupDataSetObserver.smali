@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ListPopupWindow$PopupDataSetObserver;
 .super Landroid/database/DataSetObserver;
-.source "SourceFile"
+.source "ListPopupWindow.java"
 
 
 # annotations
@@ -22,10 +22,12 @@
 .method constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
     .locals 0
 
+    .line 1344
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
+    .line 1345
     return-void
 .end method
 
@@ -34,7 +36,7 @@
 .method public onChanged()V
     .locals 1
 
-    .line 1
+    .line 1349
     iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->isShowing()Z
@@ -43,21 +45,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
-    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
+    .line 1351
+    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ListPopupWindow;->show()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->show()V
 
+    .line 1353
     :cond_0
     return-void
 .end method
 
 .method public onInvalidated()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
+    .line 1357
+    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$PopupDataSetObserver;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ListPopupWindow;->dismiss()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->dismiss()V
 
+    .line 1358
     return-void
 .end method
