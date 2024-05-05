@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/appcompat/app/ActionBar$TabListener;
 .super Ljava/lang/Object;
-.source "ActionBar.java"
+.source "SourceFile"
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public abstract onTabReselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
+.method public abstract onTabReselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/n0;)V
 .end method
 
-.method public abstract onTabSelected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
+.method public abstract onTabSelected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/n0;)V
 .end method
 
-.method public abstract onTabUnselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
+.method public abstract onTabUnselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/n0;)V
 .end method

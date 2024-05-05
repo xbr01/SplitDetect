@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/app/AlertController$ButtonHandler;
 .super Landroid/os/Handler;
-.source "AlertController.java"
+.source "SourceFile"
 
 
 # annotations
@@ -33,29 +33,26 @@
 # direct methods
 .method public constructor <init>(Landroid/content/DialogInterface;)V
     .locals 1
-    .param p1, "dialog"    # Landroid/content/DialogInterface;
 
-    .line 156
+    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 157
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroidx/appcompat/app/AlertController$ButtonHandler;->mDialog:Ljava/lang/ref/WeakReference;
 
-    .line 158
     return-void
 .end method
 
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 3
-    .param p1, "msg"    # Landroid/os/Message;
+    .locals 2
 
-    .line 162
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, -0x3
@@ -70,44 +67,40 @@
 
     if-eq v0, v1, :cond_1
 
-    const/4 v1, 0x1
+    const/4 p0, 0x1
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, p0, :cond_0
 
     goto :goto_0
 
-    .line 171
+    .line 2
     :cond_0
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Landroid/content/DialogInterface;
+    check-cast p0, Landroid/content/DialogInterface;
 
-    invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-interface {p0}, Landroid/content/DialogInterface;->dismiss()V
 
     goto :goto_0
 
-    .line 167
+    .line 3
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/content/DialogInterface$OnClickListener;
 
-    iget-object v1, p0, Landroidx/appcompat/app/AlertController$ButtonHandler;->mDialog:Ljava/lang/ref/WeakReference;
+    iget-object p0, p0, Landroidx/appcompat/app/AlertController$ButtonHandler;->mDialog:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    check-cast v1, Landroid/content/DialogInterface;
+    check-cast p0, Landroid/content/DialogInterface;
 
-    iget v2, p1, Landroid/os/Message;->what:I
+    iget p1, p1, Landroid/os/Message;->what:I
 
-    invoke-interface {v0, v1, v2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
+    invoke-interface {v0, p0, p1}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 168
-    nop
-
-    .line 173
     :goto_0
     return-void
 .end method

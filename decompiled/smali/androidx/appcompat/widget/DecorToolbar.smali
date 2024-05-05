@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/appcompat/widget/DecorToolbar;
 .super Ljava/lang/Object;
-.source "DecorToolbar.java"
+.source "SourceFile"
 
 
 # virtual methods
@@ -185,7 +185,7 @@
 .method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method
 
-.method public abstract setupAnimatorToVisibility(IJ)Landroidx/core/view/ViewPropertyAnimatorCompat;
+.method public abstract setupAnimatorToVisibility(IJ)Landroidx/core/view/f0;
 .end method
 
 .method public abstract showOverflowMenu()Z

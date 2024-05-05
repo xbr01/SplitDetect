@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;
 .super Ljava/lang/Object;
-.source "ActionMenuView.java"
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuBuilder$Callback;
@@ -25,71 +25,68 @@
 .method constructor <init>(Landroidx/appcompat/widget/ActionMenuView;)V
     .locals 0
 
-    .line 775
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 776
     return-void
 .end method
 
 
 # virtual methods
 .method public onMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
-    .locals 1
-    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
-    .param p2, "item"    # Landroid/view/MenuItem;
+    .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MenuItem;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 780
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
+    .line 1
+    iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->mOnMenuItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
+    iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView;->mOnMenuItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
+    .line 2
+    invoke-interface {p0, p2}, Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->mOnMenuItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
+    move-result p0
 
-    .line 781
-    invoke-interface {v0, p2}, Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
+    if-eqz p0, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    .line 780
     :goto_0
-    return v0
+    return p0
 .end method
 
 .method public onMenuModeChange(Landroidx/appcompat/view/menu/MenuBuilder;)V
-    .locals 1
-    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
+    .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 786
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
+    .line 1
+    iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->mMenuBuilderCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
+    iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView;->mMenuBuilderCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 787
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
+    .line 2
+    invoke-interface {p0, p1}, Landroidx/appcompat/view/menu/MenuBuilder$Callback;->onMenuModeChange(Landroidx/appcompat/view/menu/MenuBuilder;)V
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->mMenuBuilderCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
-
-    invoke-interface {v0, p1}, Landroidx/appcompat/view/menu/MenuBuilder$Callback;->onMenuModeChange(Landroidx/appcompat/view/menu/MenuBuilder;)V
-
-    .line 789
     :cond_0
     return-void
 .end method

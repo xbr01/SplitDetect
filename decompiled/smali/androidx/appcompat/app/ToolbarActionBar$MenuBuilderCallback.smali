@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;
 .super Ljava/lang/Object;
-.source "ToolbarActionBar.java"
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuBuilder$Callback;
@@ -25,40 +25,39 @@
 .method constructor <init>(Landroidx/appcompat/app/ToolbarActionBar;)V
     .locals 0
 
-    .line 583
     iput-object p1, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 584
     return-void
 .end method
 
 
 # virtual methods
 .method public onMenuItemSelected(Landroidx/appcompat/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
-    .locals 1
-    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
-    .param p2, "item"    # Landroid/view/MenuItem;
+    .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MenuItem;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 588
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public onMenuModeChange(Landroidx/appcompat/view/menu/MenuBuilder;)V
     .locals 4
-    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 593
-    iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
-
-    iget-object v0, v0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
-
-    if-eqz v0, :cond_1
-
-    .line 594
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
     iget-object v0, v0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
@@ -71,16 +70,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 595
-    iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
+    .line 2
+    iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
-    iget-object v0, v0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
+    iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
 
-    invoke-interface {v0, v1, p1}, Landroid/view/Window$Callback;->onPanelClosed(ILandroid/view/Menu;)V
+    invoke-interface {p0, v1, p1}, Landroid/view/Window$Callback;->onPanelClosed(ILandroid/view/Menu;)V
 
     goto :goto_0
 
-    .line 596
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
@@ -96,14 +95,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 598
-    iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
+    .line 4
+    iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
-    iget-object v0, v0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
+    iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
 
-    invoke-interface {v0, v1, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
+    invoke-interface {p0, v1, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
 
-    .line 601
     :cond_1
     :goto_0
     return-void

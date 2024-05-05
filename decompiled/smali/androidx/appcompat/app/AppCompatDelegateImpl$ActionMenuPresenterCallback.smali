@@ -1,6 +1,6 @@
 .class final Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;
 .super Ljava/lang/Object;
-.source "AppCompatDelegateImpl.java"
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/view/menu/MenuPresenter$Callback;
@@ -25,54 +25,52 @@
 .method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
     .locals 0
 
-    .line 2521
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2522
     return-void
 .end method
 
 
 # virtual methods
 .method public onCloseMenu(Landroidx/appcompat/view/menu/MenuBuilder;Z)V
-    .locals 1
-    .param p1, "menu"    # Landroidx/appcompat/view/menu/MenuBuilder;
-    .param p2, "allMenusAreClosing"    # Z
+    .locals 0
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2535
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->checkCloseActionMenu(Landroidx/appcompat/view/menu/MenuBuilder;)V
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->checkCloseActionMenu(Landroidx/appcompat/view/menu/MenuBuilder;)V
 
-    .line 2536
     return-void
 .end method
 
 .method public onOpenSubMenu(Landroidx/appcompat/view/menu/MenuBuilder;)Z
-    .locals 2
-    .param p1, "subMenu"    # Landroidx/appcompat/view/menu/MenuBuilder;
+    .locals 1
+    .param p1    # Landroidx/appcompat/view/menu/MenuBuilder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2526
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    .line 1
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$ActionMenuPresenterCallback;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->getWindowCallback()Landroid/view/Window$Callback;
+    invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->getWindowCallback()Landroid/view/Window$Callback;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 2527
-    .local v0, "cb":Landroid/view/Window$Callback;
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 2528
-    const/16 v1, 0x6c
+    const/16 v0, 0x6c
 
-    invoke-interface {v0, v1, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
+    .line 2
+    invoke-interface {p0, v0, p1}, Landroid/view/Window$Callback;->onMenuOpened(ILandroid/view/Menu;)Z
 
-    .line 2530
     :cond_0
-    const/4 v1, 0x1
+    const/4 p0, 0x1
 
-    return v1
+    return p0
 .end method

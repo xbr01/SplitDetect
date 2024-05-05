@@ -1,6 +1,6 @@
 .class public interface abstract annotation Landroidx/appcompat/app/AppCompatDelegate$NightMode;
 .super Ljava/lang/Object;
-.source "AppCompatDelegate.java"
+.source "SourceFile"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

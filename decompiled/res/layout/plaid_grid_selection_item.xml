@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/plaid_item_root" android:padding="@dimen/plaid_space_1x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/plaid_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="@dimen/plaid_min_tap_target_size" android:minHeight="@dimen/plaid_min_tap_target_size" />
+</FrameLayout>

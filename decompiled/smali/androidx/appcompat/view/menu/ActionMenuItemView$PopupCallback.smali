@@ -1,6 +1,6 @@
 .class public abstract Landroidx/appcompat/view/menu/ActionMenuItemView$PopupCallback;
 .super Ljava/lang/Object;
-.source "ActionMenuItemView.java"
+.source "SourceFile"
 
 
 # annotations
@@ -18,7 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 336
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

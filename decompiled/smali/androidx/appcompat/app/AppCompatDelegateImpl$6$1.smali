@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;
-.super Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;
-.source "AppCompatDelegateImpl.java"
+.super Landroidx/core/view/h0;
+.source "SourceFile"
 
 
 # annotations
@@ -21,12 +21,10 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl$6;)V
     .locals 0
-    .param p1, "this$1"    # Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
-    .line 1144
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
-    invoke-direct {p0}, Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/h0;-><init>()V
 
     return-void
 .end method
@@ -34,57 +32,52 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/view/View;)V
-    .locals 2
-    .param p1, "view"    # Landroid/view/View;
+    .locals 1
 
-    .line 1152
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
+    .line 1
+    iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionBarContextView;->setAlpha(F)V
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 1153
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
+    .line 2
+    iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/f0;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/core/view/ViewPropertyAnimatorCompat;->setListener(Landroidx/core/view/ViewPropertyAnimatorListener;)Landroidx/core/view/ViewPropertyAnimatorCompat;
+    invoke-virtual {p1, v0}, Landroidx/core/view/f0;->h(Landroidx/core/view/g0;)Landroidx/core/view/f0;
 
-    .line 1154
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
+    .line 3
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iput-object v1, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/ViewPropertyAnimatorCompat;
+    iput-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mFadeAnim:Landroidx/core/view/f0;
 
-    .line 1155
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/view/View;)V
-    .locals 2
-    .param p1, "view"    # Landroid/view/View;
+    .locals 0
 
-    .line 1147
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6$1;->this$1:Landroidx/appcompat/app/AppCompatDelegateImpl$6;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$6;->this$0:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object v0, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mActionModeView:Landroidx/appcompat/widget/ActionBarContextView;
 
-    const/4 v1, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
+    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setVisibility(I)V
 
-    .line 1148
     return-void
 .end method

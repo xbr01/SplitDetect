@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/TintInfo;
 .super Ljava/lang/Object;
-.source "TintInfo.java"
+.source "SourceFile"
 
 
 # instance fields
@@ -17,7 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,22 +27,21 @@
 .method clear()V
     .locals 2
 
-    .line 35
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Landroidx/appcompat/widget/TintInfo;->mTintList:Landroid/content/res/ColorStateList;
 
-    .line 36
     const/4 v1, 0x0
 
+    .line 2
     iput-boolean v1, p0, Landroidx/appcompat/widget/TintInfo;->mHasTintList:Z
 
-    .line 37
+    .line 3
     iput-object v0, p0, Landroidx/appcompat/widget/TintInfo;->mTintMode:Landroid/graphics/PorterDuff$Mode;
 
-    .line 38
+    .line 4
     iput-boolean v1, p0, Landroidx/appcompat/widget/TintInfo;->mHasTintMode:Z
 
-    .line 39
     return-void
 .end method

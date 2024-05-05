@@ -1,9 +1,9 @@
 .class Landroidx/appcompat/app/AlertController$2;
 .super Ljava/lang/Object;
-.source "AlertController.java"
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/core/widget/NestedScrollView$OnScrollChangeListener;
+.implements Landroidx/core/widget/NestedScrollView$c;
 
 
 # annotations
@@ -28,9 +28,7 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/app/AlertController;Landroid/view/View;Landroid/view/View;)V
     .locals 0
-    .param p1, "this$0"    # Landroidx/appcompat/app/AlertController;
 
-    .line 591
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$2;->this$0:Landroidx/appcompat/app/AlertController;
 
     iput-object p2, p0, Landroidx/appcompat/app/AlertController$2;->val$top:Landroid/view/View;
@@ -45,20 +43,13 @@
 
 # virtual methods
 .method public onScrollChange(Landroidx/core/widget/NestedScrollView;IIII)V
-    .locals 2
-    .param p1, "v"    # Landroidx/core/widget/NestedScrollView;
-    .param p2, "scrollX"    # I
-    .param p3, "scrollY"    # I
-    .param p4, "oldScrollX"    # I
-    .param p5, "oldScrollY"    # I
+    .locals 0
 
-    .line 596
-    iget-object v0, p0, Landroidx/appcompat/app/AlertController$2;->val$top:Landroid/view/View;
+    iget-object p2, p0, Landroidx/appcompat/app/AlertController$2;->val$top:Landroid/view/View;
 
-    iget-object v1, p0, Landroidx/appcompat/app/AlertController$2;->val$bottom:Landroid/view/View;
+    iget-object p0, p0, Landroidx/appcompat/app/AlertController$2;->val$bottom:Landroid/view/View;
 
-    invoke-static {p1, v0, v1}, Landroidx/appcompat/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {p1, p2, p0}, Landroidx/appcompat/app/AlertController;->manageScrollIndicators(Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    .line 597
     return-void
 .end method

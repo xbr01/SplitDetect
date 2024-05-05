@@ -1,6 +1,6 @@
 .class public Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;
 .super Landroid/animation/AnimatorListenerAdapter;
-.source "ScrollingTabContainerView.java"
+.source "SourceFile"
 
 
 # annotations
@@ -24,18 +24,17 @@
 
 # direct methods
 .method protected constructor <init>(Landroidx/appcompat/widget/ScrollingTabContainerView;)V
-    .locals 1
-    .param p1, "this$0"    # Landroidx/appcompat/widget/ScrollingTabContainerView;
+    .locals 0
 
-    .line 571
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 572
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    iput-boolean v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
+    .line 2
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
 
     return-void
 .end method
@@ -43,79 +42,67 @@
 
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
-    .param p1, "animator"    # Landroid/animation/Animator;
+    .locals 0
 
-    .line 598
-    const/4 v0, 0x1
+    const/4 p1, 0x1
 
-    iput-boolean v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
 
-    .line 599
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-    .param p1, "animator"    # Landroid/animation/Animator;
+    .locals 1
 
-    .line 590
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
+    .line 1
+    iget-boolean p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
     return-void
 
-    .line 592
+    .line 2
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
+    iget-object p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mVisibilityAnim:Landroid/view/ViewPropertyAnimator;
+    iput-object v0, p1, Landroidx/appcompat/widget/ScrollingTabContainerView;->mVisibilityAnim:Landroid/view/ViewPropertyAnimator;
 
-    .line 593
-    iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
+    .line 3
+    iget p0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mFinalVisibility:I
 
-    iget v1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mFinalVisibility:I
+    invoke-virtual {p1, p0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ScrollingTabContainerView;->setVisibility(I)V
-
-    .line 594
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-    .param p1, "animator"    # Landroid/animation/Animator;
+    .locals 1
 
-    .line 584
-    iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
+    .line 1
+    iget-object p1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ScrollingTabContainerView;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 585
-    iput-boolean v1, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
+    .line 2
+    iput-boolean v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mCanceled:Z
 
-    .line 586
     return-void
 .end method
 
 .method public withFinalVisibility(Landroid/view/ViewPropertyAnimator;I)Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;
-    .locals 1
-    .param p1, "animation"    # Landroid/view/ViewPropertyAnimator;
-    .param p2, "visibility"    # I
+    .locals 0
 
-    .line 577
+    .line 1
     iput p2, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->mFinalVisibility:I
 
-    .line 578
-    iget-object v0, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
+    .line 2
+    iget-object p2, p0, Landroidx/appcompat/widget/ScrollingTabContainerView$VisibilityAnimListener;->this$0:Landroidx/appcompat/widget/ScrollingTabContainerView;
 
-    iput-object p1, v0, Landroidx/appcompat/widget/ScrollingTabContainerView;->mVisibilityAnim:Landroid/view/ViewPropertyAnimator;
+    iput-object p1, p2, Landroidx/appcompat/widget/ScrollingTabContainerView;->mVisibilityAnim:Landroid/view/ViewPropertyAnimator;
 
-    .line 579
     return-object p0
 .end method

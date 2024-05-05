@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="id" name="about" />
     <item type="id" name="accessibility_action_clickable_span" />
     <item type="id" name="accessibility_custom_action_0" />
     <item type="id" name="accessibility_custom_action_1" />
@@ -34,7 +33,6 @@
     <item type="id" name="accessibility_custom_action_7" />
     <item type="id" name="accessibility_custom_action_8" />
     <item type="id" name="accessibility_custom_action_9" />
-    <item type="id" name="action0" />
     <item type="id" name="action_bar" />
     <item type="id" name="action_bar_activity_content" />
     <item type="id" name="action_bar_container" />
@@ -42,78 +40,203 @@
     <item type="id" name="action_bar_spinner" />
     <item type="id" name="action_bar_subtitle" />
     <item type="id" name="action_bar_title" />
+    <item type="id" name="action_consent_privacy_dialog" />
     <item type="id" name="action_container" />
     <item type="id" name="action_context_bar" />
     <item type="id" name="action_divider" />
     <item type="id" name="action_image" />
+    <item type="id" name="action_lic_id" />
     <item type="id" name="action_menu_divider" />
     <item type="id" name="action_menu_presenter" />
     <item type="id" name="action_mode_bar" />
     <item type="id" name="action_mode_bar_stub" />
     <item type="id" name="action_mode_close_button" />
+    <item type="id" name="action_passport" />
+    <item type="id" name="action_pop_to_consent" />
     <item type="id" name="action_text" />
     <item type="id" name="actions" />
     <item type="id" name="activity_chooser_view_content" />
     <item type="id" name="alertTitle" />
-    <item type="id" name="bottom_navigation" />
-    <item type="id" name="btnLogin" />
-    <item type="id" name="btnOk" />
+    <item type="id" name="androidx_window_activity_scope" />
+    <item type="id" name="background_progress" />
+    <item type="id" name="blocker_view" />
+    <item type="id" name="brand_view" />
+    <item type="id" name="browser_actions_header_text" />
+    <item type="id" name="browser_actions_menu_item_icon" />
+    <item type="id" name="browser_actions_menu_item_text" />
+    <item type="id" name="browser_actions_menu_items" />
+    <item type="id" name="browser_actions_menu_view" />
+    <item type="id" name="bs_brand_view" />
+    <item type="id" name="bs_container" />
+    <item type="id" name="btnBack" />
+    <item type="id" name="btnClose" />
+    <item type="id" name="btn_agree" />
+    <item type="id" name="btn_continue" />
+    <item type="id" name="btn_decline" />
+    <item type="id" name="btn_help" />
+    <item type="id" name="btn_lic_id" />
+    <item type="id" name="btn_manual" />
+    <item type="id" name="btn_passport" />
+    <item type="id" name="btn_retake" />
+    <item type="id" name="buttonDisclaimer" />
     <item type="id" name="buttonPanel" />
-    <item type="id" name="cancel_action" />
+    <item type="id" name="button_content" />
+    <item type="id" name="button_with_cards_header" />
+    <item type="id" name="button_with_cards_header_image" />
+    <item type="id" name="button_with_cards_recycler" />
+    <item type="id" name="button_with_webview_content" />
     <item type="id" name="cancel_button" />
-    <item type="id" name="card_view" />
-    <item type="id" name="cart" />
+    <item type="id" name="cb_consent" />
+    <item type="id" name="cblView" />
+    <item type="id" name="challenge_webview" />
     <item type="id" name="checkbox" />
-    <item type="id" name="checked" />
-    <item type="id" name="chip" />
-    <item type="id" name="chip_group" />
+    <item type="id" name="chevron" />
     <item type="id" name="chronometer" />
+    <item type="id" name="cilView" />
+    <item type="id" name="circle_center" />
+    <item type="id" name="clContainer" />
+    <item type="id" name="clContainerInside" />
+    <item type="id" name="clInstrucRoot" />
+    <item type="id" name="clScannerToolbar" />
+    <item type="id" name="clToolbarView" />
+    <item type="id" name="cl_camera_info_container" />
+    <item type="id" name="cl_confirmation" />
+    <item type="id" name="cl_consent_toolbar" />
+    <item type="id" name="cl_doc_selection_Toolbar" />
+    <item type="id" name="cl_info_view" />
+    <item type="id" name="cl_manual_view" />
+    <item type="id" name="cl_preview_bottom" />
+    <item type="id" name="cl_primary_content" />
+    <item type="id" name="cl_progress_animation_view" />
+    <item type="id" name="cl_progress_view" />
+    <item type="id" name="close_button" />
+    <item type="id" name="coil_request_manager" />
     <item type="id" name="confirm_button" />
+    <item type="id" name="consent_bottom" />
     <item type="id" name="container" />
     <item type="id" name="content" />
     <item type="id" name="contentPanel" />
+    <item type="id" name="content_area" />
+    <item type="id" name="continueDisclaimer" />
     <item type="id" name="coordinator" />
     <item type="id" name="customPanel" />
-    <item type="id" name="dataBinding" />
+    <item type="id" name="cvLicense" />
+    <item type="id" name="cvPassport" />
+    <item type="id" name="cv_image_holder" />
     <item type="id" name="date_picker_actions" />
     <item type="id" name="decor_content_parent" />
     <item type="id" name="default_activity_button" />
+    <item type="id" name="descriptor" />
     <item type="id" name="design_bottom_sheet" />
     <item type="id" name="design_menu_item_action_area" />
     <item type="id" name="design_menu_item_action_area_stub" />
     <item type="id" name="design_menu_item_text" />
     <item type="id" name="design_navigation_view" />
+    <item type="id" name="detail" />
+    <item type="id" name="detailList" />
     <item type="id" name="dialog_button" />
+    <item type="id" name="docOverView" />
     <item type="id" name="edit_query" />
-    <item type="id" name="edtPassword" />
-    <item type="id" name="edtUserName" />
-    <item type="id" name="end_padder" />
+    <item type="id" name="error_guide" />
+    <item type="id" name="error_icon" />
+    <item type="id" name="error_text" />
+    <item type="id" name="error_view" />
     <item type="id" name="expand_activities_button" />
     <item type="id" name="expanded_menu" />
-    <item type="id" name="filter_chip" />
+    <item type="id" name="extraction_blocker_view" />
+    <item type="id" name="extraction_progress_indicator" />
+    <item type="id" name="fingerprint_description" />
+    <item type="id" name="fingerprint_error" />
+    <item type="id" name="fingerprint_icon" />
+    <item type="id" name="fingerprint_required" />
+    <item type="id" name="fingerprint_subtitle" />
+    <item type="id" name="fl_status" />
+    <item type="id" name="footer" />
+    <item type="id" name="fragmentContainerView" />
+    <item type="id" name="fragment_container" />
+    <item type="id" name="fragment_container_view_tag" />
+    <item type="id" name="fullscreen_header" />
     <item type="id" name="ghost_view" />
     <item type="id" name="ghost_view_holder" />
-    <item type="id" name="glide_custom_view_target_tag" />
+    <item type="id" name="glTop" />
+    <item type="id" name="gl_bottom" />
+    <item type="id" name="gl_end" />
+    <item type="id" name="gl_left" />
+    <item type="id" name="gl_right" />
+    <item type="id" name="gl_start" />
+    <item type="id" name="gl_top" />
+    <item type="id" name="go_to_setting_description" />
+    <item type="id" name="graphicOverlay" />
     <item type="id" name="group_divider" />
+    <item type="id" name="header" />
+    <item type="id" name="headerAssetCaption" />
+    <item type="id" name="header_asset" />
+    <item type="id" name="header_title" />
+    <item type="id" name="help_image_view" />
+    <item type="id" name="help_view" />
     <item type="id" name="home" />
-    <item type="id" name="ic_add" />
-    <item type="id" name="ic_remove" />
+    <item type="id" name="ic_save_images" />
     <item type="id" name="icon" />
     <item type="id" name="icon_group" />
     <item type="id" name="image" />
-    <item type="id" name="imageView2" />
+    <item type="id" name="imgInfo" />
+    <item type="id" name="imgLicForward" />
+    <item type="id" name="imgPassportForward" />
+    <item type="id" name="imgPreview" />
+    <item type="id" name="img_brand_logo" />
+    <item type="id" name="img_preview" />
+    <item type="id" name="img_status_base" />
+    <item type="id" name="img_status_status" />
+    <item type="id" name="indeterminate_progress" />
     <item type="id" name="info" />
+    <item type="id" name="input" />
+    <item type="id" name="inputOne" />
+    <item type="id" name="inputThree" />
+    <item type="id" name="inputTwo" />
+    <item type="id" name="inputs" />
+    <item type="id" name="institution" />
+    <item type="id" name="institution_right" />
     <item type="id" name="item_touch_helper_previous_elevation" />
-    <item type="id" name="ivTop" />
-    <item type="id" name="lable_login" />
-    <item type="id" name="largeLabel" />
-    <item type="id" name="lin_toolbar" />
+    <item type="id" name="iv_dbg_preview_scan" />
+    <item type="id" name="iv_dbg_scan_stages" />
+    <item type="id" name="iv_help_graphic_view" />
+    <item type="id" name="label" />
     <item type="id" name="line1" />
     <item type="id" name="line3" />
+    <item type="id" name="link_activity_root" />
     <item type="id" name="list_item" />
-    <item type="id" name="logout" />
+    <item type="id" name="ll_primary_container" />
+    <item type="id" name="loadingProgress" />
+    <item type="id" name="loading_dots" />
+    <item type="id" name="loading_layout" />
+    <item type="id" name="loading_layout_view" />
+    <item type="id" name="logo" />
+    <item type="id" name="m3_side_sheet" />
+    <item type="id" name="markwon_drawables_scheduler" />
+    <item type="id" name="markwon_drawables_scheduler_last_text_hashcode" />
     <item type="id" name="masked" />
-    <item type="id" name="media_actions" />
+    <item type="id" name="material_clock_display" />
+    <item type="id" name="material_clock_display_and_toggle" />
+    <item type="id" name="material_clock_face" />
+    <item type="id" name="material_clock_hand" />
+    <item type="id" name="material_clock_level" />
+    <item type="id" name="material_clock_period_am_button" />
+    <item type="id" name="material_clock_period_pm_button" />
+    <item type="id" name="material_clock_period_toggle" />
+    <item type="id" name="material_hour_text_input" />
+    <item type="id" name="material_hour_tv" />
+    <item type="id" name="material_label" />
+    <item type="id" name="material_minute_text_input" />
+    <item type="id" name="material_minute_tv" />
+    <item type="id" name="material_textinput_timepicker" />
+    <item type="id" name="material_timepicker_cancel_button" />
+    <item type="id" name="material_timepicker_container" />
+    <item type="id" name="material_timepicker_mode_button" />
+    <item type="id" name="material_timepicker_ok_button" />
+    <item type="id" name="material_timepicker_view" />
+    <item type="id" name="material_value_index" />
+    <item type="id" name="menu_item_camera" />
+    <item type="id" name="menu_item_gallery" />
     <item type="id" name="message" />
     <item type="id" name="month_grid" />
     <item type="id" name="month_navigation_bar" />
@@ -121,7 +244,8 @@
     <item type="id" name="month_navigation_next" />
     <item type="id" name="month_navigation_previous" />
     <item type="id" name="month_title" />
-    <item type="id" name="more_info" />
+    <item type="id" name="motion_base" />
+    <item type="id" name="mtrl_anchor_parent" />
     <item type="id" name="mtrl_calendar_day_selector_frame" />
     <item type="id" name="mtrl_calendar_days_of_week" />
     <item type="id" name="mtrl_calendar_frame" />
@@ -133,6 +257,7 @@
     <item type="id" name="mtrl_card_checked_layer_id" />
     <item type="id" name="mtrl_child_content_container" />
     <item type="id" name="mtrl_internal_children_alpha_tag" />
+    <item type="id" name="mtrl_motion_snapshot_view" />
     <item type="id" name="mtrl_picker_fullscreen" />
     <item type="id" name="mtrl_picker_header" />
     <item type="id" name="mtrl_picker_header_selection_text" />
@@ -142,33 +267,119 @@
     <item type="id" name="mtrl_picker_text_input_range_end" />
     <item type="id" name="mtrl_picker_text_input_range_start" />
     <item type="id" name="mtrl_picker_title_text" />
+    <item type="id" name="mtrl_view_tag_bottom_padding" />
+    <item type="id" name="nav_consent_dialog" />
+    <item type="id" name="nav_consent_frag" />
+    <item type="id" name="nav_controller_view_tag" />
+    <item type="id" name="nav_host_fragment_container" />
+    <item type="id" name="nav_orch_graph" />
+    <item type="id" name="nav_orch_progress" />
+    <item type="id" name="nav_progress_frag" />
+    <item type="id" name="navigation_bar_item_active_indicator_view" />
+    <item type="id" name="navigation_bar_item_icon_container" />
+    <item type="id" name="navigation_bar_item_icon_view" />
+    <item type="id" name="navigation_bar_item_labels_group" />
+    <item type="id" name="navigation_bar_item_large_label_view" />
+    <item type="id" name="navigation_bar_item_small_label_view" />
     <item type="id" name="navigation_header_container" />
+    <item type="id" name="no_results_button" />
+    <item type="id" name="no_results_text" />
     <item type="id" name="notification_background" />
     <item type="id" name="notification_main_column" />
     <item type="id" name="notification_main_column_container" />
+    <item type="id" name="number" />
     <item type="id" name="off" />
     <item type="id" name="on" />
-    <item type="id" name="onAttachStateChangeListener" />
-    <item type="id" name="onDateChanged" />
+    <item type="id" name="ordered_list_content" />
+    <item type="id" name="ordered_list_disclaimer" />
+    <item type="id" name="ordered_list_items" />
     <item type="id" name="parentPanel" />
     <item type="id" name="parent_matrix" />
-    <item type="id" name="picture" />
-    <item type="id" name="prod_name" />
-    <item type="id" name="prod_price" />
-    <item type="id" name="product_count" />
+    <item type="id" name="pb_consent_call" />
+    <item type="id" name="pb_web_loading" />
+    <item type="id" name="pg_verifying" />
+    <item type="id" name="plaidCallToActionButton" />
+    <item type="id" name="plaidCheckBox" />
+    <item type="id" name="plaidDescriptionText" />
+    <item type="id" name="plaidDescriptorText" />
+    <item type="id" name="plaidGrid" />
+    <item type="id" name="plaidHeader" />
+    <item type="id" name="plaidInfoIcon" />
+    <item type="id" name="plaidInputsLayout" />
+    <item type="id" name="plaidListItemCta" />
+    <item type="id" name="plaidListItemImage" />
+    <item type="id" name="plaidListItemSubtitle" />
+    <item type="id" name="plaidListItemTitle" />
+    <item type="id" name="plaidMetaText" />
+    <item type="id" name="plaidPrompt" />
+    <item type="id" name="plaidRadioButton" />
+    <item type="id" name="plaidScrollableLayout" />
+    <item type="id" name="plaidTrailingIcon" />
+    <item type="id" name="plaidValueText" />
+    <item type="id" name="plaid_back_icon" />
+    <item type="id" name="plaid_bottom_sheet_primary_button" />
+    <item type="id" name="plaid_bottom_sheet_secondary_button" />
+    <item type="id" name="plaid_bottom_sheet_summary" />
+    <item type="id" name="plaid_bottom_sheet_title" />
+    <item type="id" name="plaid_button_disclaimer" />
+    <item type="id" name="plaid_button_list_content" />
+    <item type="id" name="plaid_button_message" />
+    <item type="id" name="plaid_button_message_detail" />
+    <item type="id" name="plaid_card_detail" />
+    <item type="id" name="plaid_card_label" />
+    <item type="id" name="plaid_card_title" />
+    <item type="id" name="plaid_close_icon" />
+    <item type="id" name="plaid_divider" />
+    <item type="id" name="plaid_header_image" />
+    <item type="id" name="plaid_image" />
+    <item type="id" name="plaid_input_edit_text" />
+    <item type="id" name="plaid_input_encryption" />
+    <item type="id" name="plaid_input_id" />
+    <item type="id" name="plaid_input_layout" />
+    <item type="id" name="plaid_input_validation" />
+    <item type="id" name="plaid_institution" />
+    <item type="id" name="plaid_institution_recycler" />
+    <item type="id" name="plaid_institution_search_view" />
+    <item type="id" name="plaid_item_root" />
+    <item type="id" name="plaid_items_layout" />
+    <item type="id" name="plaid_logo" />
+    <item type="id" name="plaid_navbar_title" />
+    <item type="id" name="plaid_navigation" />
+    <item type="id" name="plaid_pane_header" />
+    <item type="id" name="plaid_rendered_asset" />
+    <item type="id" name="plaid_rising_tide" />
+    <item type="id" name="plaid_search_title" />
+    <item type="id" name="plaid_subtitle" />
+    <item type="id" name="plaid_title" />
+    <item type="id" name="plaid_webview" />
+    <item type="id" name="pressed" />
+    <item type="id" name="preview" />
+    <item type="id" name="preview_view" />
+    <item type="id" name="primaryButton" />
     <item type="id" name="progress_circular" />
     <item type="id" name="progress_horizontal" />
+    <item type="id" name="progress_indicator" />
+    <item type="id" name="prompt" />
     <item type="id" name="radio" />
-    <item type="id" name="recyclerview" />
+    <item type="id" name="radiobutton" />
+    <item type="id" name="rendered_asset" />
     <item type="id" name="right_icon" />
     <item type="id" name="right_side" />
+    <item type="id" name="root" />
+    <item type="id" name="root_bottom_sheet" />
+    <item type="id" name="row_index_key" />
+    <item type="id" name="rv_contents" />
+    <item type="id" name="rv_instructions" />
     <item type="id" name="save_non_transition_alpha" />
     <item type="id" name="save_overlay_view" />
+    <item type="id" name="scannerGraphic" />
     <item type="id" name="scrollIndicatorDown" />
     <item type="id" name="scrollIndicatorUp" />
     <item type="id" name="scrollView" />
+    <item type="id" name="scrollable_content" />
     <item type="id" name="search_badge" />
     <item type="id" name="search_bar" />
+    <item type="id" name="search_bar_text_view" />
     <item type="id" name="search_button" />
     <item type="id" name="search_close_btn" />
     <item type="id" name="search_edit_frame" />
@@ -176,60 +387,232 @@
     <item type="id" name="search_mag_icon" />
     <item type="id" name="search_plate" />
     <item type="id" name="search_src_text" />
+    <item type="id" name="search_view_background" />
+    <item type="id" name="search_view_clear_button" />
+    <item type="id" name="search_view_content_container" />
+    <item type="id" name="search_view_divider" />
+    <item type="id" name="search_view_dummy_toolbar" />
+    <item type="id" name="search_view_edit_text" />
+    <item type="id" name="search_view_header_container" />
+    <item type="id" name="search_view_root" />
+    <item type="id" name="search_view_scrim" />
+    <item type="id" name="search_view_search_prefix" />
+    <item type="id" name="search_view_status_bar_spacer" />
+    <item type="id" name="search_view_toolbar" />
+    <item type="id" name="search_view_toolbar_container" />
     <item type="id" name="search_voice_btn" />
+    <item type="id" name="secondaryButton" />
     <item type="id" name="select_dialog_listview" />
-    <item type="id" name="send_data_to_broadcast" />
+    <item type="id" name="selection" />
+    <item type="id" name="selectionViewSelections" />
+    <item type="id" name="selection_type" />
+    <item type="id" name="sellingPointsSection" />
     <item type="id" name="shortcut" />
-    <item type="id" name="smallLabel" />
+    <item type="id" name="sliding_pane_detail_container" />
+    <item type="id" name="sliding_pane_layout" />
     <item type="id" name="snackbar_action" />
     <item type="id" name="snackbar_text" />
+    <item type="id" name="socure_action_camera" />
+    <item type="id" name="socure_action_doc_selection" />
+    <item type="id" name="socure_nav_doc_selection_frag" />
+    <item type="id" name="socure_nav_scanner_frag" />
     <item type="id" name="spacer" />
+    <item type="id" name="special_effects_controller_view_tag" />
     <item type="id" name="split_action_bar" />
-    <item type="id" name="status_bar_latest_event_content" />
     <item type="id" name="submenuarrow" />
     <item type="id" name="submit_area" />
+    <item type="id" name="table" />
+    <item type="id" name="table_title" />
     <item type="id" name="tag_accessibility_actions" />
     <item type="id" name="tag_accessibility_clickable_spans" />
     <item type="id" name="tag_accessibility_heading" />
     <item type="id" name="tag_accessibility_pane_title" />
+    <item type="id" name="tag_on_apply_window_listener" />
+    <item type="id" name="tag_on_receive_content_listener" />
+    <item type="id" name="tag_on_receive_content_mime_types" />
     <item type="id" name="tag_screen_reader_focusable" />
+    <item type="id" name="tag_state_description" />
     <item type="id" name="tag_transition_group" />
     <item type="id" name="tag_unhandled_key_event_manager" />
     <item type="id" name="tag_unhandled_key_listeners" />
-    <item type="id" name="test_checkbox_android_button_tint" />
-    <item type="id" name="test_checkbox_app_button_tint" />
+    <item type="id" name="tag_window_insets_animation_callback" />
+    <item type="id" name="tertiaryButton" />
     <item type="id" name="text" />
     <item type="id" name="text2" />
-    <item type="id" name="textInputPassword" />
-    <item type="id" name="textInputUserName" />
     <item type="id" name="textSpacerNoButtons" />
     <item type="id" name="textSpacerNoTitle" />
-    <item type="id" name="textView" />
-    <item type="id" name="textView2" />
-    <item type="id" name="textWatcher" />
     <item type="id" name="text_input_end_icon" />
+    <item type="id" name="text_input_error_icon" />
     <item type="id" name="text_input_start_icon" />
     <item type="id" name="textinput_counter" />
     <item type="id" name="textinput_error" />
     <item type="id" name="textinput_helper_text" />
+    <item type="id" name="textinput_placeholder" />
+    <item type="id" name="textinput_prefix_text" />
+    <item type="id" name="textinput_suffix_text" />
     <item type="id" name="time" />
     <item type="id" name="title" />
     <item type="id" name="titleDividerNoCustom" />
     <item type="id" name="title_template" />
-    <item type="id" name="toolbar" />
     <item type="id" name="topPanel" />
     <item type="id" name="touch_outside" />
+    <item type="id" name="tp_progress" />
+    <item type="id" name="tp_progress_container" />
     <item type="id" name="transition_current_scene" />
     <item type="id" name="transition_layout_save" />
     <item type="id" name="transition_position" />
     <item type="id" name="transition_scene_layoutid_cache" />
     <item type="id" name="transition_transform" />
-    <item type="id" name="tvDescription" />
-    <item type="id" name="tvMessage" />
-    <item type="id" name="tvSuccess" />
-    <item type="id" name="unchecked" />
+    <item type="id" name="tvCameraAccess" />
+    <item type="id" name="tvDocReady" />
+    <item type="id" name="tvDocSubtext" />
+    <item type="id" name="tvDocTitle" />
+    <item type="id" name="tvInfoTitle" />
+    <item type="id" name="tvLicSubText" />
+    <item type="id" name="tvLicTitle" />
+    <item type="id" name="tvPassportSubText" />
+    <item type="id" name="tvPassportTitle" />
+    <item type="id" name="tvPrimaryInfo" />
+    <item type="id" name="tvSecondaryInfo" />
+    <item type="id" name="tv_confirmation_msg" />
+    <item type="id" name="tv_confirmation_title" />
+    <item type="id" name="tv_consent_header" />
+    <item type="id" name="tv_consent_text" />
+    <item type="id" name="tv_instruction" />
+    <item type="id" name="tv_pointer" />
+    <item type="id" name="tv_powered_by" />
+    <item type="id" name="tv_preview_title" />
+    <item type="id" name="tv_progress" />
+    <item type="id" name="tv_scan_help_msg" />
+    <item type="id" name="tv_scan_help_title" />
     <item type="id" name="up" />
+    <item type="id" name="upload_blocker_view" />
+    <item type="id" name="user_input_content" />
+    <item type="id" name="user_input_inputs" />
+    <item type="id" name="user_selection_content" />
+    <item type="id" name="value" />
+    <item type="id" name="view_loader" />
     <item type="id" name="view_offset_helper" />
-    <item type="id" name="visible" />
-    <item type="id" name="webview" />
+    <item type="id" name="view_padding" />
+    <item type="id" name="view_transition" />
+    <item type="id" name="view_tree_lifecycle_owner" />
+    <item type="id" name="view_tree_on_back_pressed_dispatcher_owner" />
+    <item type="id" name="view_tree_saved_state_registry_owner" />
+    <item type="id" name="view_tree_view_model_store_owner" />
+    <item type="id" name="view_upload_loader" />
+    <item type="id" name="visible_removing_fragment_view_tag" />
+    <item type="id" name="vwGuideBox" />
+    <item type="id" name="with_icon" />
+    <item type="id" name="wv_consent_privacy" />
+    <item type="id" name="zma_avatar_space" />
+    <item type="id" name="zma_avatar_view" />
+    <item type="id" name="zma_button_container" />
+    <item type="id" name="zma_connection_banner_view" />
+    <item type="id" name="zma_conversation_header_view" />
+    <item type="id" name="zma_conversation_screen_conversation" />
+    <item type="id" name="zma_conversations_list_connection_banner" />
+    <item type="id" name="zma_conversations_list_header_view" />
+    <item type="id" name="zma_conversations_list_screen" />
+    <item type="id" name="zma_conversations_list_screen_recycler_view" />
+    <item type="id" name="zma_conversations_list_view" />
+    <item type="id" name="zma_create_conversation_button" />
+    <item type="id" name="zma_loading_indicator_view" />
+    <item type="id" name="zma_message_composer_view" />
+    <item type="id" name="zma_message_content" />
+    <item type="id" name="zma_message_label" />
+    <item type="id" name="zma_message_list" />
+    <item type="id" name="zma_message_list_recycler_view" />
+    <item type="id" name="zma_message_receipt" />
+    <item type="id" name="zma_messages_divider" />
+    <item type="id" name="zma_messages_load_more" />
+    <item type="id" name="zma_quick_reply" />
+    <item type="id" name="zma_retry_error_view" />
+    <item type="id" name="zma_setting_button" />
+    <item type="id" name="zui_divider_view" />
+    <item type="id" name="zui_message_divider" />
+    <item type="id" name="zui_message_divider_text" />
+    <item type="id" name="zuia_action_buttons_container" />
+    <item type="id" name="zuia_attach_button" />
+    <item type="id" name="zuia_avatar_container" />
+    <item type="id" name="zuia_avatar_image_view" />
+    <item type="id" name="zuia_banner_label" />
+    <item type="id" name="zuia_bottom_sheet_actions_text" />
+    <item type="id" name="zuia_bottom_sheet_container" />
+    <item type="id" name="zuia_bottom_sheet_message_text" />
+    <item type="id" name="zuia_carousel_list" />
+    <item type="id" name="zuia_carousel_list_item_article_button" />
+    <item type="id" name="zuia_carousel_list_item_article_button_container" />
+    <item type="id" name="zuia_carousel_list_item_avatar" />
+    <item type="id" name="zuia_carousel_list_item_description" />
+    <item type="id" name="zuia_carousel_list_item_image" />
+    <item type="id" name="zuia_carousel_list_item_title" />
+    <item type="id" name="zuia_carousel_next_button" />
+    <item type="id" name="zuia_carousel_prev_button" />
+    <item type="id" name="zuia_composer_container" />
+    <item type="id" name="zuia_connection_banner" />
+    <item type="id" name="zuia_conversation_avatar_image_view" />
+    <item type="id" name="zuia_conversation_date_timestamp" />
+    <item type="id" name="zuia_conversation_divider" />
+    <item type="id" name="zuia_conversation_header" />
+    <item type="id" name="zuia_conversation_header_toolbar" />
+    <item type="id" name="zuia_conversation_latest_message" />
+    <item type="id" name="zuia_conversation_participants" />
+    <item type="id" name="zuia_conversation_unread_count" />
+    <item type="id" name="zuia_error_indicator" />
+    <item type="id" name="zuia_error_retry_button" />
+    <item type="id" name="zuia_error_retry_message_text" />
+    <item type="id" name="zuia_error_text" />
+    <item type="id" name="zuia_error_view" />
+    <item type="id" name="zuia_field_input" />
+    <item type="id" name="zuia_field_label" />
+    <item type="id" name="zuia_field_layout" />
+    <item type="id" name="zuia_field_option" />
+    <item type="id" name="zuia_file_icon" />
+    <item type="id" name="zuia_file_name" />
+    <item type="id" name="zuia_file_size" />
+    <item type="id" name="zuia_form_field_counter_label" />
+    <item type="id" name="zuia_form_fields_container" />
+    <item type="id" name="zuia_form_layout" />
+    <item type="id" name="zuia_form_response_subtitle" />
+    <item type="id" name="zuia_form_response_title" />
+    <item type="id" name="zuia_header_view" />
+    <item type="id" name="zuia_icon_image" />
+    <item type="id" name="zuia_image_view" />
+    <item type="id" name="zuia_image_view_overlay" />
+    <item type="id" name="zuia_item_container" />
+    <item type="id" name="zuia_item_subtitle" />
+    <item type="id" name="zuia_item_title" />
+    <item type="id" name="zuia_label_text" />
+    <item type="id" name="zuia_message_composer_view" />
+    <item type="id" name="zuia_message_load_more_progress_indicator" />
+    <item type="id" name="zuia_message_load_retry_button" />
+    <item type="id" name="zuia_message_load_retry_container_view" />
+    <item type="id" name="zuia_message_load_retry_label" />
+    <item type="id" name="zuia_message_receipt_container" />
+    <item type="id" name="zuia_message_text" />
+    <item type="id" name="zuia_min_left_margin_text_field" />
+    <item type="id" name="zuia_min_left_margin_text_field_barrier" />
+    <item type="id" name="zuia_progress_indicator" />
+    <item type="id" name="zuia_quick_reply_chip_group" />
+    <item type="id" name="zuia_quick_reply_options_view" />
+    <item type="id" name="zuia_quick_reply_options_view_container" />
+    <item type="id" name="zuia_retry_button" />
+    <item type="id" name="zuia_send_button" />
+    <item type="id" name="zuia_submit_button" />
+    <item type="id" name="zuia_text_cell_view" />
+    <item type="id" name="zuia_text_field" />
+    <item type="id" name="zuia_typing_indicator" />
+    <item type="id" name="zxing_back_button" />
+    <item type="id" name="zxing_barcode_scanner" />
+    <item type="id" name="zxing_barcode_surface" />
+    <item type="id" name="zxing_camera_closed" />
+    <item type="id" name="zxing_camera_error" />
+    <item type="id" name="zxing_decode" />
+    <item type="id" name="zxing_decode_failed" />
+    <item type="id" name="zxing_decode_succeeded" />
+    <item type="id" name="zxing_possible_result_points" />
+    <item type="id" name="zxing_preview_failed" />
+    <item type="id" name="zxing_prewiew_size_ready" />
+    <item type="id" name="zxing_status_view" />
+    <item type="id" name="zxing_viewfinder_view" />
 </resources>

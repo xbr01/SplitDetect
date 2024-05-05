@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
-.super Landroidx/collection/LruCache;
-.source "ResourceManagerInternal.java"
+.super Landroidx/collection/f;
+.source "SourceFile"
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroidx/collection/LruCache<",
+        "Landroidx/collection/f<",
         "Ljava/lang/Integer;",
         "Landroid/graphics/PorterDuffColorFilter;",
         ">;"
@@ -26,91 +26,68 @@
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
-    .param p1, "maxSize"    # I
 
-    .line 431
-    invoke-direct {p0, p1}, Landroidx/collection/LruCache;-><init>(I)V
+    invoke-direct {p0, p1}, Landroidx/collection/f;-><init>(I)V
 
-    .line 432
     return-void
 .end method
 
 .method private static generateCacheKey(ILandroid/graphics/PorterDuff$Mode;)I
-    .locals 3
-    .param p0, "color"    # I
-    .param p1, "mode"    # Landroid/graphics/PorterDuff$Mode;
+    .locals 1
 
-    .line 443
-    const/4 v0, 0x1
+    const/16 v0, 0x1f
 
-    .line 444
-    .local v0, "hashCode":I
-    mul-int/lit8 v1, v0, 0x1f
+    add-int/2addr p0, v0
 
-    add-int/2addr v1, p0
-
-    .line 445
-    .end local v0    # "hashCode":I
-    .local v1, "hashCode":I
-    mul-int/lit8 v0, v1, 0x1f
+    mul-int/2addr p0, v0
 
     invoke-virtual {p1}, Landroid/graphics/PorterDuff$Mode;->hashCode()I
 
-    move-result v2
+    move-result p1
 
-    add-int/2addr v0, v2
+    add-int/2addr p0, p1
 
-    .line 446
-    .end local v1    # "hashCode":I
-    .restart local v0    # "hashCode":I
-    return v0
+    return p0
 .end method
 
 
 # virtual methods
 .method get(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-    .locals 1
-    .param p1, "color"    # I
-    .param p2, "mode"    # Landroid/graphics/PorterDuff$Mode;
+    .locals 0
 
-    .line 435
     invoke-static {p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->generateCacheKey(ILandroid/graphics/PorterDuff$Mode;)I
 
-    move-result v0
+    move-result p1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroidx/collection/f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroid/graphics/PorterDuffColorFilter;
+    check-cast p0, Landroid/graphics/PorterDuffColorFilter;
 
-    return-object v0
+    return-object p0
 .end method
 
 .method put(ILandroid/graphics/PorterDuff$Mode;Landroid/graphics/PorterDuffColorFilter;)Landroid/graphics/PorterDuffColorFilter;
-    .locals 1
-    .param p1, "color"    # I
-    .param p2, "mode"    # Landroid/graphics/PorterDuff$Mode;
-    .param p3, "filter"    # Landroid/graphics/PorterDuffColorFilter;
+    .locals 0
 
-    .line 439
     invoke-static {p1, p2}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->generateCacheKey(ILandroid/graphics/PorterDuff$Mode;)I
 
-    move-result v0
+    move-result p1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {p0, v0, p3}, Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p3}, Landroidx/collection/f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Landroid/graphics/PorterDuffColorFilter;
+    check-cast p0, Landroid/graphics/PorterDuffColorFilter;
 
-    return-object v0
+    return-object p0
 .end method

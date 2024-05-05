@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/appcompat/widget/ActivityChooserModel$ActivityChooserModelClient;
 .super Ljava/lang/Object;
-.source "ActivityChooserModel.java"
+.source "SourceFile"
 
 
 # annotations

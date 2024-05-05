@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;
-.super Landroidx/appcompat/graphics/drawable/DrawableWrapper;
-.source "DropDownListView.java"
+.super Landroidx/appcompat/graphics/drawable/DrawableWrapperCompat;
+.source "SourceFile"
 
 
 # annotations
@@ -20,18 +20,16 @@
 
 # direct methods
 .method constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-    .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-    .line 382
-    invoke-direct {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
+    .line 1
+    invoke-direct {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapperCompat;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    .line 383
-    const/4 v0, 0x1
+    const/4 p1, 0x1
 
-    iput-boolean v0, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
+    .line 2
+    iput-boolean p1, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
 
-    .line 384
     return-void
 .end method
 
@@ -39,113 +37,95 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 1
-    .param p1, "canvas"    # Landroid/graphics/Canvas;
 
-    .line 400
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 401
-    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->draw(Landroid/graphics/Canvas;)V
+    .line 2
+    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapperCompat;->draw(Landroid/graphics/Canvas;)V
 
-    .line 403
     :cond_0
     return-void
 .end method
 
 .method setEnabled(Z)V
     .locals 0
-    .param p1, "enabled"    # Z
 
-    .line 387
     iput-boolean p1, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
 
-    .line 388
     return-void
 .end method
 
 .method public setHotspot(FF)V
     .locals 1
-    .param p1, "x"    # F
-    .param p2, "y"    # F
 
-    .line 407
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 408
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->setHotspot(FF)V
+    .line 2
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/DrawableWrapperCompat;->setHotspot(FF)V
 
-    .line 410
     :cond_0
     return-void
 .end method
 
 .method public setHotspotBounds(IIII)V
     .locals 1
-    .param p1, "left"    # I
-    .param p2, "top"    # I
-    .param p3, "right"    # I
-    .param p4, "bottom"    # I
 
-    .line 414
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 415
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->setHotspotBounds(IIII)V
+    .line 2
+    invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/graphics/drawable/DrawableWrapperCompat;->setHotspotBounds(IIII)V
 
-    .line 417
     :cond_0
     return-void
 .end method
 
 .method public setState([I)Z
     .locals 1
-    .param p1, "stateSet"    # [I
 
-    .line 392
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 393
-    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->setState([I)Z
+    .line 2
+    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/DrawableWrapperCompat;->setState([I)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 
-    .line 395
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method
 
 .method public setVisible(ZZ)Z
     .locals 1
-    .param p1, "visible"    # Z
-    .param p2, "restart"    # Z
 
-    .line 421
+    .line 1
     iget-boolean v0, p0, Landroidx/appcompat/widget/DropDownListView$GateKeeperDrawable;->mEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 422
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/DrawableWrapper;->setVisible(ZZ)Z
+    .line 2
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/DrawableWrapperCompat;->setVisible(ZZ)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 
-    .line 424
     :cond_0
-    const/4 v0, 0x0
+    const/4 p0, 0x0
 
-    return v0
+    return p0
 .end method

@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatableTransition;
 .super Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;
-.source "AnimatedStateListDrawableCompat.java"
+.source "SourceFile"
 
 
 # annotations
@@ -21,42 +21,36 @@
 # direct methods
 .method constructor <init>(Landroid/graphics/drawable/Animatable;)V
     .locals 1
-    .param p1, "a"    # Landroid/graphics/drawable/Animatable;
 
-    .line 370
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;-><init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$1;)V
 
-    .line 371
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatableTransition;->mA:Landroid/graphics/drawable/Animatable;
 
-    .line 372
     return-void
 .end method
 
 
 # virtual methods
 .method public start()V
-    .locals 1
+    .locals 0
 
-    .line 376
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatableTransition;->mA:Landroid/graphics/drawable/Animatable;
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatableTransition;->mA:Landroid/graphics/drawable/Animatable;
 
-    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->start()V
+    invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->start()V
 
-    .line 377
     return-void
 .end method
 
 .method public stop()V
-    .locals 1
+    .locals 0
 
-    .line 381
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatableTransition;->mA:Landroid/graphics/drawable/Animatable;
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatableTransition;->mA:Landroid/graphics/drawable/Animatable;
 
-    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
+    invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->stop()V
 
-    .line 382
     return-void
 .end method

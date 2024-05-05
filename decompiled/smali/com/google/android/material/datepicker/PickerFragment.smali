@@ -1,114 +1,83 @@
 .class abstract Lcom/google/android/material/datepicker/PickerFragment;
 .super Landroidx/fragment/app/Fragment;
-.source "PickerFragment.java"
+.source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<S:",
-        "Ljava/lang/Object;",
-        ">",
-        "Landroidx/fragment/app/Fragment;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/newrelic/agent/android/api/v2/a;
 
 
 # instance fields
-.field protected final onSelectionChangedListeners:Ljava/util/LinkedHashSet;
+.field protected final a:Ljava/util/LinkedHashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedHashSet<",
-            "Lcom/google/android/material/datepicker/OnSelectionChangedListener<",
-            "TS;>;>;"
+            "Lcom/google/android/material/datepicker/m<",
+            "Ljava/lang/Object;",
+            ">;>;"
         }
     .end annotation
 .end field
+
+.field public b:Lcom/newrelic/agent/android/tracing/d;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 1
 
-    .line 21
-    .local p0, "this":Lcom/google/android/material/datepicker/PickerFragment;, "Lcom/google/android/material/datepicker/PickerFragment<TS;>;"
+    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/Fragment;-><init>()V
 
-    .line 23
+    .line 2
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->onSelectionChangedListeners:Ljava/util/LinkedHashSet;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method addOnSelectionChangedListener(Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/material/datepicker/OnSelectionChangedListener<",
-            "TS;>;)Z"
-        }
-    .end annotation
+.method X()V
+    .locals 0
 
-    .line 30
-    .local p0, "this":Lcom/google/android/material/datepicker/PickerFragment;, "Lcom/google/android/material/datepicker/PickerFragment<TS;>;"
-    .local p1, "listener":Lcom/google/android/material/datepicker/OnSelectionChangedListener;, "Lcom/google/android/material/datepicker/OnSelectionChangedListener<TS;>;"
-    iget-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->onSelectionChangedListeners:Ljava/util/LinkedHashSet;
+    iget-object p0, p0, Lcom/google/android/material/datepicker/PickerFragment;->a:Ljava/util/LinkedHashSet;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Ljava/util/LinkedHashSet;->clear()V
 
-    move-result v0
-
-    return v0
-.end method
-
-.method clearOnSelectionChangedListeners()V
-    .locals 1
-
-    .line 40
-    .local p0, "this":Lcom/google/android/material/datepicker/PickerFragment;, "Lcom/google/android/material/datepicker/PickerFragment<TS;>;"
-    iget-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->onSelectionChangedListeners:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->clear()V
-
-    .line 41
     return-void
 .end method
 
-.method abstract getDateSelector()Lcom/google/android/material/datepicker/DateSelector;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/material/datepicker/DateSelector<",
-            "TS;>;"
-        }
-    .end annotation
+.method public _nr_setTrace(Lcom/newrelic/agent/android/tracing/d;)V
+    .locals 0
+
+    :try_start_0
+    iput-object p1, p0, Lcom/google/android/material/datepicker/PickerFragment;->b:Lcom/newrelic/agent/android/tracing/d;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
 .end method
 
-.method removeOnSelectionChangedListener(Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Z
-    .locals 1
+.method e(Lcom/google/android/material/datepicker/m;)Z
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/android/material/datepicker/OnSelectionChangedListener<",
-            "TS;>;)Z"
+            "Lcom/google/android/material/datepicker/m<",
+            "Ljava/lang/Object;",
+            ">;)Z"
         }
     .end annotation
 
-    .line 35
-    .local p0, "this":Lcom/google/android/material/datepicker/PickerFragment;, "Lcom/google/android/material/datepicker/PickerFragment<TS;>;"
-    .local p1, "listener":Lcom/google/android/material/datepicker/OnSelectionChangedListener;, "Lcom/google/android/material/datepicker/OnSelectionChangedListener<TS;>;"
-    iget-object v0, p0, Lcom/google/android/material/datepicker/PickerFragment;->onSelectionChangedListeners:Ljava/util/LinkedHashSet;
+    iget-object p0, p0, Lcom/google/android/material/datepicker/PickerFragment;->a:Ljava/util/LinkedHashSet;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashSet;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

@@ -1,9 +1,9 @@
 .class Landroidx/appcompat/app/WindowDecorActionBar$3;
 .super Ljava/lang/Object;
-.source "WindowDecorActionBar.java"
+.source "SourceFile"
 
 # interfaces
-.implements Landroidx/core/view/ViewPropertyAnimatorUpdateListener;
+.implements Landroidx/core/view/i0;
 
 
 # annotations
@@ -24,9 +24,7 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/app/WindowDecorActionBar;)V
     .locals 0
-    .param p1, "this$0"    # Landroidx/appcompat/app/WindowDecorActionBar;
 
-    .line 161
     iput-object p1, p0, Landroidx/appcompat/app/WindowDecorActionBar$3;->this$0:Landroidx/appcompat/app/WindowDecorActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,26 +35,21 @@
 
 # virtual methods
 .method public onAnimationUpdate(Landroid/view/View;)V
-    .locals 2
-    .param p1, "view"    # Landroid/view/View;
+    .locals 0
 
-    .line 164
-    iget-object v0, p0, Landroidx/appcompat/app/WindowDecorActionBar$3;->this$0:Landroidx/appcompat/app/WindowDecorActionBar;
+    .line 1
+    iget-object p0, p0, Landroidx/appcompat/app/WindowDecorActionBar$3;->this$0:Landroidx/appcompat/app/WindowDecorActionBar;
 
-    iget-object v0, v0, Landroidx/appcompat/app/WindowDecorActionBar;->mContainerView:Landroidx/appcompat/widget/ActionBarContainer;
+    iget-object p0, p0, Landroidx/appcompat/app/WindowDecorActionBar;->mContainerView:Landroidx/appcompat/widget/ActionBarContainer;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarContainer;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 165
-    .local v0, "parent":Landroid/view/ViewParent;
-    move-object v1, v0
+    .line 2
+    check-cast p0, Landroid/view/View;
 
-    check-cast v1, Landroid/view/View;
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    .line 166
     return-void
 .end method

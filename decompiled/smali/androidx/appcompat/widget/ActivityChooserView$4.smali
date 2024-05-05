@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ActivityChooserView$4;
 .super Landroidx/appcompat/widget/ForwardingListener;
-.source "ActivityChooserView.java"
+.source "SourceFile"
 
 
 # annotations
@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;Landroid/view/View;)V
     .locals 0
-    .param p1, "this$0"    # Landroidx/appcompat/widget/ActivityChooserView;
-    .param p2, "src"    # Landroid/view/View;
 
-    .line 262
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     invoke-direct {p0, p2}, Landroidx/appcompat/widget/ForwardingListener;-><init>(Landroid/view/View;)V
@@ -35,42 +32,37 @@
 
 # virtual methods
 .method public getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
-    .locals 1
+    .locals 0
 
-    .line 265
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
+    iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/ListPopupWindow;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/ListPopupWindow;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method protected onForwardingStarted()Z
-    .locals 1
+    .locals 0
 
-    .line 270
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
+    iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->showPopup()Z
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->showPopup()Z
 
-    .line 271
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method
 
 .method protected onForwardingStopped()Z
-    .locals 1
+    .locals 0
 
-    .line 276
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
+    iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActivityChooserView;->dismissPopup()Z
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->dismissPopup()Z
 
-    .line 277
-    const/4 v0, 0x1
+    const/4 p0, 0x1
 
-    return v0
+    return p0
 .end method

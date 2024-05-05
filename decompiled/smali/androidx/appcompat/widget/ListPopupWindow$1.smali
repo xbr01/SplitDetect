@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/ListPopupWindow$1;
 .super Landroidx/appcompat/widget/ForwardingListener;
-.source "ListPopupWindow.java"
+.source "SourceFile"
 
 
 # annotations
@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;Landroid/view/View;)V
     .locals 0
-    .param p1, "this$0"    # Landroidx/appcompat/widget/ListPopupWindow;
-    .param p2, "src"    # Landroid/view/View;
 
-    .line 1141
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$1;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0, p2}, Landroidx/appcompat/widget/ForwardingListener;-><init>(Landroid/view/View;)V
@@ -35,21 +32,21 @@
 
 # virtual methods
 .method public bridge synthetic getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
-    .locals 1
+    .locals 0
 
-    .line 1141
+    .line 1
     invoke-virtual {p0}, Landroidx/appcompat/widget/ListPopupWindow$1;->getPopup()Landroidx/appcompat/widget/ListPopupWindow;
 
-    move-result-object v0
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method
 
 .method public getPopup()Landroidx/appcompat/widget/ListPopupWindow;
-    .locals 1
+    .locals 0
 
-    .line 1144
-    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$1;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
+    .line 2
+    iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$1;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
-    return-object v0
+    return-object p0
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/material/datepicker/MaterialTextInputPicker;
 .super Lcom/google/android/material/datepicker/PickerFragment;
-.source "MaterialTextInputPicker.java"
+.source "SourceFile"
 
 
 # annotations
@@ -9,220 +9,214 @@
         "<S:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/google/android/material/datepicker/PickerFragment<",
-        "TS;>;"
+        "Lcom/google/android/material/datepicker/PickerFragment;"
     }
 .end annotation
 
 
-# static fields
-.field private static final CALENDAR_CONSTRAINTS_KEY:Ljava/lang/String; = "CALENDAR_CONSTRAINTS_KEY"
-
-.field private static final DATE_SELECTOR_KEY:Ljava/lang/String; = "DATE_SELECTOR_KEY"
-
-
 # instance fields
-.field private calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
+.field private c:I
 
-.field private dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+.field private d:Lcom/google/android/material/datepicker/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/android/material/datepicker/DateSelector<",
+            "Lcom/google/android/material/datepicker/d<",
             "TS;>;"
         }
     .end annotation
 .end field
+
+.field private e:Lcom/google/android/material/datepicker/a;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 33
-    .local p0, "this":Lcom/google/android/material/datepicker/MaterialTextInputPicker;, "Lcom/google/android/material/datepicker/MaterialTextInputPicker<TS;>;"
     invoke-direct {p0}, Lcom/google/android/material/datepicker/PickerFragment;-><init>()V
 
     return-void
 .end method
 
-.method static newInstance(Lcom/google/android/material/datepicker/DateSelector;Lcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/MaterialTextInputPicker;
+.method static Y(Lcom/google/android/material/datepicker/d;ILcom/google/android/material/datepicker/a;)Lcom/google/android/material/datepicker/MaterialTextInputPicker;
     .locals 3
-    .param p1, "calendarConstraints"    # Lcom/google/android/material/datepicker/CalendarConstraints;
+    .param p2    # Lcom/google/android/material/datepicker/a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/android/material/datepicker/DateSelector<",
-            "TT;>;",
-            "Lcom/google/android/material/datepicker/CalendarConstraints;",
+            "Lcom/google/android/material/datepicker/d<",
+            "TT;>;I",
+            "Lcom/google/android/material/datepicker/a;",
             ")",
             "Lcom/google/android/material/datepicker/MaterialTextInputPicker<",
             "TT;>;"
         }
     .end annotation
 
-    .line 44
-    .local p0, "dateSelector":Lcom/google/android/material/datepicker/DateSelector;, "Lcom/google/android/material/datepicker/DateSelector<TT;>;"
+    .line 1
     new-instance v0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;
 
     invoke-direct {v0}, Lcom/google/android/material/datepicker/MaterialTextInputPicker;-><init>()V
 
-    .line 45
-    .local v0, "materialCalendar":Lcom/google/android/material/datepicker/MaterialTextInputPicker;, "Lcom/google/android/material/datepicker/MaterialTextInputPicker<TT;>;"
+    .line 2
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 46
-    .local v1, "args":Landroid/os/Bundle;
-    const-string v2, "DATE_SELECTOR_KEY"
+    const-string v2, "THEME_RES_ID_KEY"
 
-    invoke-virtual {v1, v2, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    .line 3
+    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 47
-    const-string v2, "CALENDAR_CONSTRAINTS_KEY"
+    const-string p1, "DATE_SELECTOR_KEY"
 
-    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    .line 4
+    invoke-virtual {v1, p1, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 48
-    invoke-virtual {v0, v1}, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->setArguments(Landroid/os/Bundle;)V
+    const-string p0, "CALENDAR_CONSTRAINTS_KEY"
 
-    .line 49
+    .line 5
+    invoke-virtual {v1, p0, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    .line 6
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
+
     return-object v0
 .end method
 
 
 # virtual methods
-.method public getDateSelector()Lcom/google/android/material/datepicker/DateSelector;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/material/datepicker/DateSelector<",
-            "TS;>;"
-        }
-    .end annotation
-
-    .line 91
-    .local p0, "this":Lcom/google/android/material/datepicker/MaterialTextInputPicker;, "Lcom/google/android/material/datepicker/MaterialTextInputPicker<TS;>;"
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->dateSelector:Lcom/google/android/material/datepicker/DateSelector;
-
-    if-eqz v0, :cond_0
-
-    .line 97
-    return-object v0
-
-    .line 92
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "dateSelector should not be null. Use MaterialTextInputPicker#newInstance() to create this fragment with a DateSelector, and call this method after the fragment has been created."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
-    .param p1, "bundle"    # Landroid/os/Bundle;
+    .locals 1
 
-    .line 61
-    .local p0, "this":Lcom/google/android/material/datepicker/MaterialTextInputPicker;, "Lcom/google/android/material/datepicker/MaterialTextInputPicker<TS;>;"
-    invoke-super {p0, p1}, Lcom/google/android/material/datepicker/PickerFragment;->onCreate(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 62
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->getArguments()Landroid/os/Bundle;
+    .line 2
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    :cond_0
+    const-string v0, "THEME_RES_ID_KEY"
+
+    .line 3
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->c:I
+
+    const-string v0, "DATE_SELECTOR_KEY"
+
+    .line 4
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    goto :goto_0
+    check-cast v0, Lcom/google/android/material/datepicker/d;
 
-    :cond_0
-    move-object v0, p1
+    iput-object v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->d:Lcom/google/android/material/datepicker/d;
 
-    .line 63
-    .local v0, "activeBundle":Landroid/os/Bundle;
-    :goto_0
-    const-string v1, "DATE_SELECTOR_KEY"
+    const-string v0, "CALENDAR_CONSTRAINTS_KEY"
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    .line 5
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    move-result-object v1
+    move-result-object p1
 
-    check-cast v1, Lcom/google/android/material/datepicker/DateSelector;
+    check-cast p1, Lcom/google/android/material/datepicker/a;
 
-    iput-object v1, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+    iput-object p1, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->e:Lcom/google/android/material/datepicker/a;
 
-    .line 64
-    const-string v1, "CALENDAR_CONSTRAINTS_KEY"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/material/datepicker/CalendarConstraints;
-
-    iput-object v1, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
-
-    .line 65
     return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 6
-    .param p1, "layoutInflater"    # Landroid/view/LayoutInflater;
-    .param p2, "viewGroup"    # Landroid/view/ViewGroup;
-    .param p3, "bundle"    # Landroid/os/Bundle;
+    .locals 9
+    .param p1    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 73
-    .local p0, "this":Lcom/google/android/material/datepicker/MaterialTextInputPicker;, "Lcom/google/android/material/datepicker/MaterialTextInputPicker<TS;>;"
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+    .line 1
+    new-instance v0, Landroid/view/ContextThemeWrapper;
 
-    iget-object v4, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
-    new-instance v5, Lcom/google/android/material/datepicker/MaterialTextInputPicker$1;
+    move-result-object v1
 
-    invoke-direct {v5, p0}, Lcom/google/android/material/datepicker/MaterialTextInputPicker$1;-><init>(Lcom/google/android/material/datepicker/MaterialTextInputPicker;)V
+    iget v2, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->c:I
 
-    move-object v1, p1
+    invoke-direct {v0, v1, v2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    move-object v2, p2
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    move-object v3, p3
+    move-result-object v4
 
-    invoke-interface/range {v0 .. v5}, Lcom/google/android/material/datepicker/DateSelector;->onCreateTextInputView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Landroid/view/View;
+    .line 3
+    iget-object v3, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->d:Lcom/google/android/material/datepicker/d;
 
-    move-result-object v0
+    iget-object v7, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->e:Lcom/google/android/material/datepicker/a;
 
-    return-object v0
+    new-instance v8, Lcom/google/android/material/datepicker/MaterialTextInputPicker$a;
+
+    invoke-direct {v8, p0}, Lcom/google/android/material/datepicker/MaterialTextInputPicker$a;-><init>(Lcom/google/android/material/datepicker/MaterialTextInputPicker;)V
+
+    move-object v5, p2
+
+    move-object v6, p3
+
+    invoke-interface/range {v3 .. v8}, Lcom/google/android/material/datepicker/d;->k(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;Lcom/google/android/material/datepicker/a;Lcom/google/android/material/datepicker/m;)Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
-    .param p1, "bundle"    # Landroid/os/Bundle;
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 54
-    .local p0, "this":Lcom/google/android/material/datepicker/MaterialTextInputPicker;, "Lcom/google/android/material/datepicker/MaterialTextInputPicker<TS;>;"
-    invoke-super {p0, p1}, Lcom/google/android/material/datepicker/PickerFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 55
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->dateSelector:Lcom/google/android/material/datepicker/DateSelector;
+    .line 2
+    iget v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->c:I
+
+    const-string v1, "THEME_RES_ID_KEY"
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 3
+    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->d:Lcom/google/android/material/datepicker/d;
 
     const-string v1, "DATE_SELECTOR_KEY"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 56
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
+    .line 4
+    iget-object p0, p0, Lcom/google/android/material/datepicker/MaterialTextInputPicker;->e:Lcom/google/android/material/datepicker/a;
 
-    const-string v1, "CALENDAR_CONSTRAINTS_KEY"
+    const-string v0, "CALENDAR_CONSTRAINTS_KEY"
 
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    invoke-virtual {p1, v0, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 57
     return-void
 .end method

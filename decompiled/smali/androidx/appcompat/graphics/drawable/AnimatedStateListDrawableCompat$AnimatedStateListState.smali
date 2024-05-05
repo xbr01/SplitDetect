@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;
-.super Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;
-.source "AnimatedStateListDrawableCompat.java"
+.super Landroidx/appcompat/graphics/drawable/StateListDrawableCompat$StateListState;
+.source "SourceFile"
 
 
 # annotations
@@ -21,20 +21,20 @@
 
 
 # instance fields
-.field mStateIds:Landroidx/collection/SparseArrayCompat;
+.field mStateIds:Landroidx/collection/h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/SparseArrayCompat<",
+            "Landroidx/collection/h<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field mTransitions:Landroidx/collection/LongSparseArray;
+.field mTransitions:Landroidx/collection/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/LongSparseArray<",
+            "Landroidx/collection/e<",
             "Ljava/lang/Long;",
             ">;"
         }
@@ -44,191 +44,163 @@
 
 # direct methods
 .method constructor <init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;Landroid/content/res/Resources;)V
-    .locals 1
-    .param p1, "orig"    # Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;
-    .param p2, "owner"    # Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;
-    .param p3, "res"    # Landroid/content/res/Resources;
+    .locals 0
+    .param p2    # Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 634
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;Landroidx/appcompat/graphics/drawable/StateListDrawable;Landroid/content/res/Resources;)V
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/graphics/drawable/StateListDrawableCompat$StateListState;-><init>(Landroidx/appcompat/graphics/drawable/StateListDrawableCompat$StateListState;Landroidx/appcompat/graphics/drawable/StateListDrawableCompat;Landroid/content/res/Resources;)V
 
-    .line 635
     if-eqz p1, :cond_0
 
-    .line 637
-    iget-object v0, p1, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
+    .line 2
+    iget-object p2, p1, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
+    iput-object p2, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    .line 638
-    iget-object v0, p1, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/SparseArrayCompat;
+    .line 3
+    iget-object p1, p1, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/h;
 
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/SparseArrayCompat;
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/h;
 
     goto :goto_0
 
-    .line 640
+    .line 4
     :cond_0
-    new-instance v0, Landroidx/collection/LongSparseArray;
+    new-instance p1, Landroidx/collection/e;
 
-    invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
+    invoke-direct {p1}, Landroidx/collection/e;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    .line 641
-    new-instance v0, Landroidx/collection/SparseArrayCompat;
+    .line 5
+    new-instance p1, Landroidx/collection/h;
 
-    invoke-direct {v0}, Landroidx/collection/SparseArrayCompat;-><init>()V
+    invoke-direct {p1}, Landroidx/collection/h;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/SparseArrayCompat;
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/h;
 
-    .line 643
     :goto_0
     return-void
 .end method
 
 .method private static generateTransitionKey(II)J
-    .locals 4
-    .param p0, "fromId"    # I
-    .param p1, "toId"    # I
+    .locals 2
 
-    .line 712
     int-to-long v0, p0
 
-    const/16 v2, 0x20
+    const/16 p0, 0x20
 
-    shl-long/2addr v0, v2
+    shl-long/2addr v0, p0
 
-    int-to-long v2, p1
+    int-to-long p0, p1
 
-    or-long/2addr v0, v2
+    or-long/2addr p0, v0
 
-    return-wide v0
+    return-wide p0
 .end method
 
 
 # virtual methods
 .method addStateSet([ILandroid/graphics/drawable/Drawable;I)I
-    .locals 3
-    .param p1, "stateSet"    # [I
-    .param p2, "drawable"    # Landroid/graphics/drawable/Drawable;
-    .param p3, "id"    # I
+    .locals 0
+    .param p1    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 667
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->addStateSet([ILandroid/graphics/drawable/Drawable;)I
+    .line 1
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/StateListDrawableCompat$StateListState;->addStateSet([ILandroid/graphics/drawable/Drawable;)I
 
-    move-result v0
+    move-result p1
 
-    .line 668
-    .local v0, "index":I
-    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/SparseArrayCompat;
+    .line 2
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/h;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object p2
 
-    invoke-virtual {v1, v0, v2}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/collection/h;->m(ILjava/lang/Object;)V
 
-    .line 669
-    return v0
+    return p1
 .end method
 
 .method addTransition(IILandroid/graphics/drawable/Drawable;Z)I
-    .locals 16
-    .param p1, "fromId"    # I
-    .param p2, "toId"    # I
-    .param p3, "anim"    # Landroid/graphics/drawable/Drawable;
-    .param p4, "reversible"    # Z
+    .locals 9
+    .param p3    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 652
-    move-object/from16 v0, p0
+    .line 1
+    invoke-super {p0, p3}, Landroidx/appcompat/graphics/drawable/DrawableContainerCompat$DrawableContainerState;->addChild(Landroid/graphics/drawable/Drawable;)I
 
-    move-object/from16 v1, p3
+    move-result p3
 
-    invoke-super {v0, v1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->addChild(Landroid/graphics/drawable/Drawable;)I
+    .line 2
+    invoke-static {p1, p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->generateTransitionKey(II)J
 
-    move-result v2
+    move-result-wide v0
 
-    .line 653
-    .local v2, "pos":I
-    invoke-static/range {p1 .. p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->generateTransitionKey(II)J
-
-    move-result-wide v3
-
-    .line 654
-    .local v3, "keyFromTo":J
-    const-wide/16 v5, 0x0
-
-    .line 655
-    .local v5, "reversibleBit":J
     if-eqz p4, :cond_0
 
-    .line 656
-    const-wide v5, 0x200000000L
-
-    .line 658
-    :cond_0
-    iget-object v7, v0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
-
-    int-to-long v8, v2
-
-    or-long/2addr v8, v5
-
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v8
-
-    invoke-virtual {v7, v3, v4, v8}, Landroidx/collection/LongSparseArray;->append(JLjava/lang/Object;)V
-
-    .line 659
-    if-eqz p4, :cond_1
-
-    .line 660
-    move/from16 v7, p1
-
-    move/from16 v8, p2
-
-    invoke-static {v8, v7}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->generateTransitionKey(II)J
-
-    move-result-wide v9
-
-    .line 661
-    .local v9, "keyToFrom":J
-    iget-object v11, v0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
-
-    int-to-long v12, v2
-
-    const-wide v14, 0x100000000L
-
-    or-long/2addr v12, v14
-
-    or-long/2addr v12, v5
-
-    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v12
-
-    invoke-virtual {v11, v9, v10, v12}, Landroidx/collection/LongSparseArray;->append(JLjava/lang/Object;)V
+    const-wide v2, 0x200000000L
 
     goto :goto_0
 
-    .line 659
-    .end local v9    # "keyToFrom":J
-    :cond_1
-    move/from16 v7, p1
+    :cond_0
+    const-wide/16 v2, 0x0
 
-    move/from16 v8, p2
-
-    .line 663
+    .line 3
     :goto_0
-    return v2
+    iget-object v4, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
+
+    int-to-long v5, p3
+
+    or-long v7, v5, v2
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {v4, v0, v1, v7}, Landroidx/collection/e;->a(JLjava/lang/Object;)V
+
+    if-eqz p4, :cond_1
+
+    .line 4
+    invoke-static {p2, p1}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->generateTransitionKey(II)J
+
+    move-result-wide p1
+
+    .line 5
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
+
+    const-wide v0, 0x100000000L
+
+    or-long/2addr v0, v5
+
+    or-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p4
+
+    invoke-virtual {p0, p1, p2, p4}, Landroidx/collection/e;->a(JLjava/lang/Object;)V
+
+    :cond_1
+    return p3
 .end method
 
 .method getKeyframeIdAt(I)I
-    .locals 2
-    .param p1, "index"    # I
+    .locals 1
 
-    .line 681
     const/4 v0, 0x0
 
     if-gez p1, :cond_0
@@ -236,19 +208,19 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/SparseArrayCompat;
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/h;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {v1, p1, v0}, Landroidx/collection/SparseArrayCompat;->get(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Landroidx/collection/h;->g(ILjava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast p0, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
@@ -257,147 +229,142 @@
 .end method
 
 .method indexOfKeyframe([I)I
-    .locals 2
-    .param p1, "stateSet"    # [I
+    .locals 0
+    .param p1    # [I
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 673
-    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->indexOfStateSet([I)I
+    .line 1
+    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawableCompat$StateListState;->indexOfStateSet([I)I
 
-    move-result v0
+    move-result p1
 
-    .line 674
-    .local v0, "index":I
-    if-ltz v0, :cond_0
+    if-ltz p1, :cond_0
 
-    .line 675
-    return v0
+    return p1
 
-    .line 677
+    .line 2
     :cond_0
-    sget-object v1, Landroid/util/StateSet;->WILD_CARD:[I
+    sget-object p1, Landroid/util/StateSet;->WILD_CARD:[I
 
-    invoke-super {p0, v1}, Landroidx/appcompat/graphics/drawable/StateListDrawable$StateListState;->indexOfStateSet([I)I
+    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/StateListDrawableCompat$StateListState;->indexOfStateSet([I)I
 
-    move-result v1
+    move-result p0
 
-    return v1
+    return p0
 .end method
 
 .method indexOfTransition(II)I
-    .locals 5
-    .param p1, "fromId"    # I
-    .param p2, "toId"    # I
+    .locals 2
 
-    .line 685
+    .line 1
     invoke-static {p1, p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->generateTransitionKey(II)J
 
-    move-result-wide v0
+    move-result-wide p1
 
-    .line 686
-    .local v0, "keyFromTo":J
-    iget-object v2, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
+    .line 2
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v0, -0x1
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v2, v0, v1, v3}, Landroidx/collection/LongSparseArray;->get(JLjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2, v0}, Landroidx/collection/e;->f(JLjava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p0
 
-    check-cast v2, Ljava/lang/Long;
+    check-cast p0, Ljava/lang/Long;
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide p0
 
-    long-to-int v3, v2
+    long-to-int p0, p0
 
-    return v3
+    return p0
 .end method
 
 .method isTransitionReversed(II)Z
-    .locals 7
-    .param p1, "fromId"    # I
-    .param p2, "toId"    # I
+    .locals 2
 
-    .line 690
+    .line 1
     invoke-static {p1, p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->generateTransitionKey(II)J
 
-    move-result-wide v0
+    move-result-wide p1
 
-    .line 691
-    .local v0, "keyFromTo":J
-    iget-object v2, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
+    .line 2
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v0, -0x1
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v2, v0, v1, v3}, Landroidx/collection/LongSparseArray;->get(JLjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2, v0}, Landroidx/collection/e;->f(JLjava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p0
 
-    check-cast v2, Ljava/lang/Long;
+    check-cast p0, Ljava/lang/Long;
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide p0
 
-    const-wide v4, 0x100000000L
+    const-wide v0, 0x100000000L
 
-    and-long/2addr v2, v4
+    and-long/2addr p0, v0
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v0, 0x0
 
-    cmp-long v6, v2, v4
+    cmp-long p0, p0, v0
 
-    if-eqz v6, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v2, 0x1
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return v2
+    return p0
 .end method
 
 .method mutate()V
     .locals 1
 
-    .line 647
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    invoke-virtual {v0}, Landroidx/collection/LongSparseArray;->clone()Landroidx/collection/LongSparseArray;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
-
-    .line 648
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/SparseArrayCompat;
-
-    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->clone()Landroidx/collection/SparseArrayCompat;
+    invoke-virtual {v0}, Landroidx/collection/e;->c()Landroidx/collection/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/SparseArrayCompat;
+    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    .line 649
+    .line 2
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/h;
+
+    invoke-virtual {v0}, Landroidx/collection/h;->c()Landroidx/collection/h;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mStateIds:Landroidx/collection/h;
+
     return-void
 .end method
 
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 702
+    .line 1
     new-instance v0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;
 
     const/4 v1, 0x0
@@ -409,9 +376,10 @@
 
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 1
-    .param p1, "res"    # Landroid/content/res/Resources;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 708
+    .line 2
     new-instance v0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;
 
     invoke-direct {v0, p0, p1}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat;-><init>(Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;Landroid/content/res/Resources;)V
@@ -420,52 +388,49 @@
 .end method
 
 .method transitionHasReversibleFlag(II)Z
-    .locals 7
-    .param p1, "fromId"    # I
-    .param p2, "toId"    # I
+    .locals 2
 
-    .line 695
+    .line 1
     invoke-static {p1, p2}, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->generateTransitionKey(II)J
 
-    move-result-wide v0
+    move-result-wide p1
 
-    .line 696
-    .local v0, "keyFromTo":J
-    iget-object v2, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/LongSparseArray;
+    .line 2
+    iget-object p0, p0, Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$AnimatedStateListState;->mTransitions:Landroidx/collection/e;
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v0, -0x1
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v2, v0, v1, v3}, Landroidx/collection/LongSparseArray;->get(JLjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2, v0}, Landroidx/collection/e;->f(JLjava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p0
 
-    check-cast v2, Ljava/lang/Long;
+    check-cast p0, Ljava/lang/Long;
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide p0
 
-    const-wide v4, 0x200000000L
+    const-wide v0, 0x200000000L
 
-    and-long/2addr v2, v4
+    and-long/2addr p0, v0
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v0, 0x0
 
-    cmp-long v6, v2, v4
+    cmp-long p0, p0, v0
 
-    if-eqz v6, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v2, 0x1
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 p0, 0x0
 
     :goto_0
-    return v2
+    return p0
 .end method

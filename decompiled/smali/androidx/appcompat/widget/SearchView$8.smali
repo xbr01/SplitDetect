@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/widget/SearchView$8;
 .super Ljava/lang/Object;
-.source "SearchView.java"
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;
@@ -24,9 +24,7 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
-    .param p1, "this$0"    # Landroidx/appcompat/widget/SearchView;
 
-    .line 1407
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$8;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,10 +35,7 @@
 
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .param p2, "view"    # Landroid/view/View;
-    .param p3, "position"    # I
-    .param p4, "id"    # J
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -51,16 +46,13 @@
         }
     .end annotation
 
-    .line 1415
-    .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
-    iget-object v0, p0, Landroidx/appcompat/widget/SearchView$8;->this$0:Landroidx/appcompat/widget/SearchView;
+    iget-object p0, p0, Landroidx/appcompat/widget/SearchView$8;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    const/4 v1, 0x0
+    const/4 p1, 0x0
 
-    const/4 v2, 0x0
+    const/4 p2, 0x0
 
-    invoke-virtual {v0, p3, v1, v2}, Landroidx/appcompat/widget/SearchView;->onItemClicked(IILjava/lang/String;)Z
+    invoke-virtual {p0, p3, p1, p2}, Landroidx/appcompat/widget/SearchView;->onItemClicked(IILjava/lang/String;)Z
 
-    .line 1416
     return-void
 .end method

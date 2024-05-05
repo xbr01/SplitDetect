@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/app/ToolbarActionBar$2;
 .super Ljava/lang/Object;
-.source "ToolbarActionBar.java"
+.source "SourceFile"
 
 # interfaces
 .implements Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;
@@ -24,9 +24,7 @@
 # direct methods
 .method constructor <init>(Landroidx/appcompat/app/ToolbarActionBar;)V
     .locals 0
-    .param p1, "this$0"    # Landroidx/appcompat/app/ToolbarActionBar;
 
-    .line 61
     iput-object p1, p0, Landroidx/appcompat/app/ToolbarActionBar$2;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,19 +35,17 @@
 
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
-    .param p1, "item"    # Landroid/view/MenuItem;
+    .locals 1
 
-    .line 64
-    iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar$2;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
+    iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar$2;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
-    iget-object v0, v0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
+    iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mWindowCallback:Landroid/view/Window$Callback;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-interface {v0, v1, p1}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
+    invoke-interface {p0, v0, p1}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method

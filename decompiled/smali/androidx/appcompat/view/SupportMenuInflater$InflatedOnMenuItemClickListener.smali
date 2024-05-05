@@ -1,6 +1,6 @@
 .class Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;
 .super Ljava/lang/Object;
-.source "SupportMenuInflater.java"
+.source "SourceFile"
 
 # interfaces
 .implements Landroid/view/MenuItem$OnMenuItemClickListener;
@@ -39,7 +39,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 242
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -56,90 +55,79 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 5
-    .param p1, "realOwner"    # Ljava/lang/Object;
-    .param p2, "methodName"    # Ljava/lang/String;
+    .locals 3
 
-    .line 247
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 248
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mRealOwner:Ljava/lang/Object;
 
-    .line 249
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    .line 4
+    :try_start_0
+    sget-object v0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->PARAM_TYPES:[Ljava/lang/Class;
+
+    invoke-virtual {p1, p2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 251
-    .local v0, "c":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
-    :try_start_0
-    sget-object v1, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->PARAM_TYPES:[Ljava/lang/Class;
-
-    invoke-virtual {v0, p2, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    iput-object v1, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mMethod:Ljava/lang/reflect/Method;
+    iput-object v0, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mMethod:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 258
-    nop
-
-    .line 259
     return-void
 
-    .line 252
     :catch_0
-    move-exception v1
+    move-exception p0
 
-    .line 253
-    .local v1, "e":Ljava/lang/Exception;
-    new-instance v2, Landroid/view/InflateException;
+    .line 5
+    new-instance v0, Landroid/view/InflateException;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Couldn\'t resolve menu item onClick handler "
+    const-string v2, "Couldn\'t resolve menu item onClick handler "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, " in class "
+    const-string p2, " in class "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 255
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object p1
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object p1
 
-    invoke-direct {v2, v3}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Landroid/view/InflateException;-><init>(Ljava/lang/String;)V
 
-    .line 256
-    .local v2, "ex":Landroid/view/InflateException;
-    invoke-virtual {v2, v1}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 7
+    invoke-virtual {v0, p0}, Landroid/view/InflateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 257
-    throw v2
+    .line 8
+    throw v0
 .end method
 
 
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 5
-    .param p1, "item"    # Landroid/view/MenuItem;
+    .locals 4
 
-    .line 264
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mMethod:Ljava/lang/reflect/Method;
 
@@ -155,53 +143,50 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 265
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mMethod:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mRealOwner:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mRealOwner:Ljava/lang/Object;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v1, v3, [Ljava/lang/Object;
 
-    aput-object p1, v3, v2
+    aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast p0, Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 
-    .line 267
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mMethod:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mRealOwner:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/appcompat/view/SupportMenuInflater$InflatedOnMenuItemClickListener;->mRealOwner:Ljava/lang/Object;
 
-    new-array v4, v3, [Ljava/lang/Object;
+    new-array v1, v3, [Ljava/lang/Object;
 
-    aput-object p1, v4, v2
+    aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 268
     return v3
 
-    .line 270
     :catch_0
-    move-exception v0
+    move-exception p0
 
-    .line 271
-    .local v0, "e":Ljava/lang/Exception;
-    new-instance v1, Ljava/lang/RuntimeException;
+    .line 4
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    throw v1
+    throw p1
 .end method
